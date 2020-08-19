@@ -1,0 +1,5 @@
+//
+$include "../reanims_helpers/QCIs/slots_enums.qci"
+
+$definemacro _setxdreanimmodelname __CHARACTER_NAME __SLOTNUM \\
+$modelname xdreanims/$__CHARACTER_NAME$_slot_$__SLOTNUM$.mdl

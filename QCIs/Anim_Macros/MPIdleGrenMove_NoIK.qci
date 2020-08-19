@@ -1,0 +1,23 @@
+//
+//
+//
+//
+//		
+//
+//
+//
+//
+//
+$definemacro IdleGrenMoveNoIKMacro sequence shared ZeroMove frame aimlayer Idlenoise fadein fadeout activity \\
+$animation a_$ZeroMove$		$ZeroMove$	noautoik fps 40 frame $frame$ $frame$ numframes 242 loop cmdlist IK_to_BBox align Shoot_Standing_Grenade1 x y 20 0 \\
+$sequence $ZeroMove$_layer	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop x y z iklock lfoot 1 0 iklock rfoot 1 0 weightlist PELVIS100ARMS0 worldspace hidden align Shoot_Standing_Grenade1 x y 20 0 \\
+$sequence $ZeroMove$_arms	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop weightlist CLAVICLES_ONLY hidden \\
+$sequence $sequence$ { \\
+			a_$ZeroMove$ \\ 
+			loop \\
+			blendlayer $ZeroMove$_layer 0 0 0 0 local \\
+			addlayer $ZeroMove$_arms \\
+			addlayer $aimlayer$ addlayer $Idlenoise$ \\ 
+			fadein $fadein$ fadeout $fadeout$ \\
+			activity $activity$ -1 \\ 
+} \\

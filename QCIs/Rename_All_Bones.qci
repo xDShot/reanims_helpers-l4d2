@@ -1,0 +1,514 @@
+// The QCI that you're currently laying your eyes upon is simply here to rename all l4d2 bones to include the prefix "ValveBiped."....so feel free to use this if you're exporting from maya scenes to FBX.
+
+
+//Survivor Skeleton
+
+$renamebone "Bip01_Pelvis" "ValveBiped.Bip01_Pelvis"
+$renamebone "Bip01_L_Thigh" "ValveBiped.Bip01_L_Thigh"
+$renamebone "Bip01_L_Calf" "ValveBiped.Bip01_L_Calf"
+$renamebone "Bip01_L_Foot" "ValveBiped.Bip01_L_Foot"
+$renamebone "Bip01_L_Toe0" "ValveBiped.Bip01_L_Toe0"
+$renamebone "Bip01_R_Thigh" "ValveBiped.Bip01_R_Thigh"
+$renamebone "Bip01_R_Foot" "ValveBiped.Bip01_R_Foot"
+$renamebone "Bip01_R_Toe0" "ValveBiped.Bip01_R_Toe0"
+$renamebone "Bip01_Spine" "ValveBiped.Bip01_Spine"
+$renamebone "Bip01_Spine1" "ValveBiped.Bip01_Spine1"
+$renamebone "Bip01_Spine2" "ValveBiped.Bip01_Spine2"
+$renamebone "Bip01_Spine4" "ValveBiped.Bip01_Spine4"
+$renamebone "Bip01_Neck1" "ValveBiped.Bip01_Neck1"
+$renamebone "Bip01_Head1" "ValveBiped.Bip01_Head1"
+$renamebone "Bip01_L_Clavicle" "ValveBiped.Bip01_L_Clavicle"
+$renamebone "Bip01_L_UpperArm" "ValveBiped.Bip01_L_UpperArm"
+$renamebone "Bip01_L_Forearm" "ValveBiped.Bip01_L_Forearm"
+$renamebone "Bip01_L_Hand" "ValveBiped.Bip01_L_Hand"
+$renamebone "Bip01_L_Finger4" "ValveBiped.Bip01_L_Finger4"
+$renamebone "Bip01_L_Finger41" "ValveBiped.Bip01_L_Finger41"
+$renamebone "Bip01_L_Finger42" "ValveBiped.Bip01_L_Finger42"
+$renamebone "Bip01_L_Finger3" "ValveBiped.Bip01_L_Finger3"
+$renamebone "Bip01_L_Finger31" "ValveBiped.Bip01_L_Finger31"
+$renamebone "Bip01_L_Finger32" "ValveBiped.Bip01_L_Finger32"
+$renamebone "Bip01_L_Finger2" "ValveBiped.Bip01_L_Finger2"
+$renamebone "Bip01_L_Finger21" "ValveBiped.Bip01_L_Finger21"
+$renamebone "Bip01_L_Finger22" "ValveBiped.Bip01_L_Finger22"
+$renamebone "Bip01_L_Finger1" "ValveBiped.Bip01_L_Finger1"
+$renamebone "Bip01_L_Finger11" "ValveBiped.Bip01_L_Finger11"
+$renamebone "Bip01_L_Finger12" "ValveBiped.Bip01_L_Finger12"
+$renamebone "Bip01_L_Finger0" "ValveBiped.Bip01_L_Finger0"
+$renamebone "Bip01_L_Finger01" "ValveBiped.Bip01_L_Finger01"
+$renamebone "Bip01_L_Finger02" "ValveBiped.Bip01_L_Finger02"
+$renamebone "Bip01_R_Clavicle" "ValveBiped.Bip01_R_Clavicle"
+$renamebone "Bip01_R_UpperArm" "ValveBiped.Bip01_R_UpperArm"
+$renamebone "Bip01_R_Forearm" "ValveBiped.Bip01_R_Forearm"
+$renamebone "Bip01_R_Hand" "ValveBiped.Bip01_R_Hand"
+$renamebone "Bip01_R_Finger4" "ValveBiped.Bip01_R_Finger4"
+$renamebone "Bip01_R_Finger41" "ValveBiped.Bip01_R_Finger41"
+$renamebone "Bip01_R_Finger42" "ValveBiped.Bip01_R_Finger42"
+$renamebone "Bip01_R_Finger3" "ValveBiped.Bip01_R_Finger3"
+$renamebone "Bip01_R_Finger31" "ValveBiped.Bip01_R_Finger31"
+$renamebone "Bip01_R_Finger32" "ValveBiped.Bip01_R_Finger32"
+$renamebone "Bip01_R_Finger2" "ValveBiped.Bip01_R_Finger2"
+$renamebone "Bip01_R_Finger21" "ValveBiped.Bip01_R_Finger21"
+$renamebone "Bip01_R_Finger22" "ValveBiped.Bip01_R_Finger22"
+$renamebone "Bip01_R_Finger1" "ValveBiped.Bip01_R_Finger1"
+$renamebone "Bip01_R_Finger11" "ValveBiped.Bip01_R_Finger11"
+$renamebone "Bip01_R_Finger12" "ValveBiped.Bip01_R_Finger12"
+$renamebone "Bip01_R_Finger0" "ValveBiped.Bip01_R_Finger0"
+$renamebone "Bip01_R_Finger01" "ValveBiped.Bip01_R_Finger01"
+$renamebone "Bip01_R_Finger02" "ValveBiped.Bip01_R_Finger02"
+$renamebone "attachment_bandage_legL" "ValveBiped.attachment_bandage_legL"
+$renamebone "attachment_bandage_ArmL" "ValveBiped.attachment_bandage_ArmL"
+$renamebone "attachment_armL_T" "ValveBiped.attachment_armL_T"
+$renamebone "attachment_armR_T" "ValveBiped.attachment_armR_T"
+$renamebone "weapon_bone" "ValveBiped.weapon_bone"
+$renamebone "forward" "ValveBiped.forward"
+$renamebone "L_weapon_bone" "ValveBiped.L_weapon_bone"
+$renamebone "Bip01_L_Knee" "ValveBiped.Bip01_L_Knee"
+$renamebone "Bip01_R_Knee" "ValveBiped.Bip01_R_Knee"
+$renamebone "Bip01_L_Ulna" "ValveBiped.Bip01_L_Ulna"
+$renamebone "Bip01_L_Wrist" "ValveBiped.Bip01_L_Wrist"
+$renamebone "Bip01_L_Elbow" "ValveBiped.Bip01_L_Elbow"
+$renamebone "Bip01_L_Bicep" "ValveBiped.Bip01_L_Bicep"
+$renamebone "hlp_jacket_arm_front1_L" "ValveBiped.hlp_jacket_arm_front1_L"
+$renamebone "hlp_jacket_arm_top_L" "ValveBiped.hlp_jacket_arm_top_L"
+$renamebone "hlp_jacket_arm_back_L" "ValveBiped.hlp_jacket_arm_back_L"
+$renamebone "Bip01_R_Wrist" "ValveBiped.Bip01_R_Wrist"
+$renamebone "Bip01_R_Ulna" "ValveBiped.Bip01_R_Ulna"
+$renamebone "Bip01_R_Elbow" "ValveBiped.Bip01_R_Elbow"
+$renamebone "Bip01_R_Bicep" "ValveBiped.Bip01_R_Bicep"
+$renamebone "hlp_jacket_arm_front1_R" "ValveBiped.hlp_jacket_arm_front1_R"
+$renamebone "hlp_jacket_arm_top_R" "ValveBiped.hlp_jacket_arm_top_R"
+$renamebone "hlp_jacket_arm_back_R" "ValveBiped.hlp_jacket_arm_back_R"
+$renamebone "hlp_jacket_armpit_R" "ValveBiped.hlp_jacket_armpit_R"
+$renamebone "weapon_Bone_Clip" "ValveBiped.weapon_Bone_Clip"
+$renamebone "weapon_Bone_Extra" "ValveBiped.weapon_Bone_Extra"
+$renamebone "Bip01_R_Quadricep" "ValveBiped.Bip01_R_Quadricep"
+$renamebone "Bip01_L_Quadricep" "ValveBiped.Bip01_L_Quadricep"
+$renamebone "hlp_l_Quad" "ValveBiped.hlp_l_Quad"
+$renamebone "hlp_r_Quad" "ValveBiped.hlp_r_Quad"
+$renamebone "hlp_r_trap" "ValveBiped.hlp_r_trap"
+$renamebone "Bip01_L_Shoulder" "ValveBiped.Bip01_L_Shoulder"
+$renamebone "Bip01_R_Shoulder" "ValveBiped.Bip01_R_Shoulder"
+$renamebone "hlp_shoulder1_L" "ValveBiped.hlp_shoulder1_L"
+$renamebone "hlp_shoulder1_R" "ValveBiped.hlp_shoulder1_R"
+$renamebone "Bip01_L_Trapezius" "ValveBiped.Bip01_L_Trapezius"
+$renamebone "Bip01_R_Trapezius" "ValveBiped.Bip01_R_Trapezius"
+$renamebone "hlp_gluteus_L" "ValveBiped.hlp_gluteus_L"
+$renamebone "hlp_gluteus_R" "ValveBiped.hlp_gluteus_R"
+
+
+////JIGGLEBONES////
+//Francis Jigglebones
+$renamebone "jiggy_jacket_left" "ValveBiped.jiggy_jacket_left"
+$renamebone "jiggy_jacket_right" "ValveBiped.jiggy_jacket_right"
+
+//Louis Jigglebones
+$renamebone "jiggy_gunholster" "ValveBiped.jiggy_gunholster"
+$renamebone "jiggy_holsterbag" "ValveBiped.jiggy_holsterbag"
+$renamebone "jiggy_sidebag" "ValveBiped.jiggy_sidebag"
+$renamebone "jiggy_keyring" "ValveBiped.jiggy_keyring"
+$renamebone "jiggy_keysfront" "ValveBiped.jiggy_keysfront"
+$renamebone "jiggy_keysrear" "ValveBiped.jiggy_keysrear"
+$renamebone "jiggy_hood" "ValveBiped.jiggy_hood"
+$renamebone "jiggle_tie1" "ValveBiped.jiggle_tie1"
+$renamebone "jiggle_tie2" "ValveBiped.jiggle_tie2"
+$renamebone "jiggle_tie3" "ValveBiped.jiggle_tie3"
+$renamebone "jiggle_tie4" "ValveBiped.jiggle_tie4"
+$renamebone "hlp_shirt_front" "ValveBiped.hlp_shirt_front"
+
+//Rochelle Jigglebones
+$renamebone "braid03_01" "ValveBiped.braid03_01"
+$renamebone "braid03_02" "ValveBiped.braid03_02"
+$renamebone "braid03_03" "ValveBiped.braid03_03"
+$renamebone "braid01_01" "ValveBiped.braid01_01"
+$renamebone "braid01_02" "ValveBiped.braid01_02"
+$renamebone "braid01_03" "ValveBiped.braid01_03"
+$renamebone "braid01_04" "ValveBiped.braid01_04"
+$renamebone "braid02_01" "ValveBiped.braid02_01"
+$renamebone "braid02_02" "ValveBiped.braid02_02"
+$renamebone "braid02_03" "ValveBiped.braid02_03"
+$renamebone "pony01" "ValveBiped.pony01"
+$renamebone "pony02" "ValveBiped.pony02"
+
+//Zoey Jigglebones
+$renamebone "jiggle_holster" "ValveBiped.jiggle_holster"
+$renamebone "jiggy_hair_ponytail_01" "ValveBiped.jiggy_hair_ponytail_01"
+$renamebone "jiggy_hair_ponytail_02" "ValveBiped.jiggy_hair_ponytail_02"
+$renamebone "jiggy_hair_lsideburn" "ValveBiped.jiggy_hair_lsideburn"
+$renamebone "jiggy_hair_rsideburn" "ValveBiped.jiggy_hair_rsideburn"
+$renamebone "jiggy_hair_lbang_01" "ValveBiped.jiggy_hair_lbang_01"
+$renamebone "jiggy_hair_rbang" "ValveBiped.jiggy_hair_rbang"
+
+
+
+
+
+
+
+////1st Person View////
+$renamebone "Bip01_L_wrist_Helper2" "ValveBiped.Bip01_L_wrist_Helper2"
+$renamebone "Bip01_L_thumbroot" "ValveBiped.Bip01_L_thumbroot"
+$renamebone "Bip01_L_wrist_Helper1" "ValveBiped.Bip01_L_wrist_Helper1"
+$renamebone "Bip01_R_wrist_Helper2" "ValveBiped.Bip01_R_wrist_Helper2"
+$renamebone "Bip01_R_thumbroot" "ValveBiped.Bip01_R_thumbroot"
+$renamebone "Bip01_R_wrist_Helper1" "ValveBiped.Bip01_R_wrist_Helper1"
+
+
+
+
+
+
+
+////WEAPON and ITEM SKELETONS////
+
+$renamebone "polySurface1" "ValveBiped.polySurface1"
+$renamebone "polySurface11" "ValveBiped.polySurface11"
+$renamebone "polySurface12" "ValveBiped.polySurface12"
+$renamebone "polySurface15" "ValveBiped.polySurface15"
+$renamebone "polySurface17" "ValveBiped.polySurface17"
+$renamebone "polySurface19" "ValveBiped.polySurface19"
+$renamebone "polySurface2" "ValveBiped.polySurface2"
+$renamebone "ValveBiped" "ValveBiped.ValveBiped"
+$renamebone "Bip01" "ValveBiped.Bip01"
+$renamebone "Camera" "ValveBiped.Camera"
+$renamebone "attach_muzzle" "ValveBiped.attach_muzzle"
+$renamebone "attach_shell_eject" "ValveBiped.attach_shell_eject"
+$renamebone "attach_camera" "ValveBiped.attach_camera"
+$renamebone "weapon_charger_slide" "ValveBiped.weapon_charger_slide"
+$renamebone "weapon_stock_hammer" "ValveBiped.weapon_stock_hammer"
+$renamebone "weapon_bolt" "ValveBiped.weapon_bolt"
+$renamebone "weapon_safety" "ValveBiped.weapon_safety"
+$renamebone "weapon_trigger" "ValveBiped.weapon_trigger"
+$renamebone "weapon_clip_realease" "ValveBiped.weapon_clip_realease"
+$renamebone "weapon_clip" "ValveBiped.weapon_clip"
+$renamebone "weapon_clip_bullets_l" "ValveBiped.weapon_clip_bullets_l"
+$renamebone "weapon_clip_bullets" "ValveBiped.weapon_clip_bullets"
+$renamebone "Bip01_R_Forearm_driven" "ValveBiped.Bip01_R_Forearm_driven"
+$renamebone "Bip01_R_Driven_ulna" "ValveBiped.Bip01_R_Driven_ulna"
+$renamebone "Bip01_R_thumbroot" "ValveBiped.Bip01_R_thumbroot"
+$renamebone "Bip01_L_Forearm_driven" "ValveBiped.Bip01_L_Forearm_driven"
+$renamebone "Bip01_L_Driven_ulna" "ValveBiped.Bip01_L_Driven_ulna"
+$renamebone "Bip01_L_thumbroot" "ValveBiped.Bip01_L_thumbroot"
+
+
+//Chainsaw
+$renamebone "chainsaw" "ValveBiped.chainsaw"
+$renamebone "joint1" "ValveBiped.joint1"
+$renamebone "joint11" "ValveBiped.joint11"
+$renamebone "joint14" "ValveBiped.joint14"
+$renamebone "joint2" "ValveBiped.joint2"
+$renamebone "joint8" "ValveBiped.joint8"
+$renamebone "joint13" "ValveBiped.joint13"
+$renamebone "joint12" "ValveBiped.joint12"
+$renamebone "joint7" "ValveBiped.joint7"
+$renamebone "joint6" "ValveBiped.joint6"
+$renamebone "joint5" "ValveBiped.joint5"
+$renamebone "joint4" "ValveBiped.joint4"
+$renamebone "joint3" "ValveBiped.joint3"
+$renamebone "aligned" "ValveBiped.aligned"
+$renamebone "aligned13" "ValveBiped.aligned13"
+$renamebone "aligned11" "ValveBiped.aligned11"
+$renamebone "aligned2" "ValveBiped.aligned2"
+$renamebone "aligned3" "ValveBiped.aligned3"
+$renamebone "aligned5" "ValveBiped.aligned5"
+$renamebone "aligned7" "ValveBiped.aligned7"
+$renamebone "aligned9" "ValveBiped.aligned9"
+$renamebone "hlp_wrist01_L" "ValveBiped.hlp_wrist01_L"
+$renamebone "hlp_ulna01_L" "ValveBiped.hlp_ulna01_L"
+$renamebone "hlp_ulna02_L" "ValveBiped.hlp_ulna02_L"
+$renamebone "hlp_wrist01_R" "ValveBiped.hlp_wrist01_R"
+$renamebone "hlp_ulna01_R" "ValveBiped.hlp_ulna01_R"
+$renamebone "hlp_ulna02_R" "ValveBiped.hlp_ulna02_R"
+
+//Guitar
+$renamebone "string002" "ValveBiped.string002"
+
+//Gnome
+$renamebone "weapon_clip_realease" "ValveBiped.weapon_clip_realease"
+
+//Cola
+$renamebone "W_cOLA" "ValveBiped.W_cOLA"
+$renamebone "bottle004_Glass" "ValveBiped.bottle004_Glass"
+$renamebone "bottle004_liquid" "ValveBiped.bottle004_liquid"
+$renamebone "bottle005_Glass" "ValveBiped.bottle005_Glass"
+$renamebone "bottle005_liquid" "ValveBiped.bottle005_liquid"
+$renamebone "bottle006_Glass" "ValveBiped.bottle006_Glass"
+$renamebone "bottle006_liquid" "ValveBiped.bottle006_liquid"
+$renamebone "bottle001_Glass" "ValveBiped.bottle001_Glass"
+$renamebone "bottle001_liquid" "ValveBiped.bottle001_liquid"
+$renamebone "bottle003_Glass" "ValveBiped.bottle003_Glass"
+$renamebone "bottle003_liquid" "ValveBiped.bottle003_liquid"
+$renamebone "bottle002_Glass" "ValveBiped.bottle002_Glass"
+$renamebone "bottle002_liquid" "ValveBiped.bottle002_liquid"
+
+//Adrenaline
+$renamebone "W_Adrenaline" "ValveBiped.W_Adrenaline"
+
+//Vomit Bile
+$renamebone "jiggle_liquid" "ValveBiped.jiggle_liquid"
+$renamebone "polySurface24" "ValveBiped.polySurface24"
+$renamebone "polySurface25" "ValveBiped.polySurface25"
+$renamebone "polySurface26" "ValveBiped.polySurface26"
+
+//Pipebomb
+$renamebone "fuse_root" "ValveBiped.fuse_root"
+$renamebone "jiggle_fuse0" "ValveBiped.jiggle_fuse0"
+$renamebone "jiggle_fuse1" "ValveBiped.jiggle_fuse1"
+$renamebone "jiggle_fuse2" "ValveBiped.jiggle_fuse2"
+
+//Defib
+$renamebone "defibWorldOrient" "ValveBiped.defibWorldOrient"
+$renamebone "defibrill" "ValveBiped.defibrill"
+$renamebone "paddles" "ValveBiped.paddles"
+$renamebone "extrudedSurface5" "ValveBiped.extrudedSurface5"
+$renamebone "extrudedSurface4" "ValveBiped.extrudedSurface4"
+$renamebone "body" "ValveBiped.body"
+$renamebone "pCylinder20" "ValveBiped.pCylinder20"
+$renamebone "pCylinder23" "ValveBiped.pCylinder23"
+$renamebone "pCylinder26" "ValveBiped.pCylinder26"
+$renamebone "pCylinder27" "ValveBiped.pCylinder27"
+$renamebone "pCylinder28" "ValveBiped.pCylinder28"
+$renamebone "polySurface10" "ValveBiped."
+$renamebone "polySurface25" "ValveBiped."
+$renamebone "polySurface17" "ValveBiped."
+$renamebone "polySurface19" "ValveBiped."
+$renamebone "polySurface21" "ValveBiped."
+$renamebone "polySurface22" "ValveBiped."
+$renamebone "polySurface24" "ValveBiped."
+$renamebone "w_pistol_A_dual" "ValveBiped.w_pistol_A_dual"
+
+//Exploding Ammo
+$renamebone "explosions" "ValveBiped.explosions"
+$renamebone "polySurface257" "ValveBiped.polySurface257"
+$renamebone "polySurface258" "ValveBiped.polySurface258"
+$renamebone "polySurface247" "ValveBiped.polySurface247"
+
+//knife
+$renamebone "knife" "ValveBiped.knife"
+
+//Laser Sights
+$renamebone "w_laser_sights" "ValveBiped.w_laser_sights"
+
+//Guns
+$renamebone "base" "ValveBiped.base"
+$renamebone "gun" "ValveBiped.gun"
+$renamebone "link_eject" "ValveBiped.link_eject"
+$renamebone "shell_eject" "ValveBiped.shell_eject"
+$renamebone "polySurface328" "ValveBiped.polySurface328"
+$renamebone "polySurface342" "ValveBiped.polySurface342"
+$renamebone "polySurface331" "ValveBiped.polySurface331"
+$renamebone "polySurface343" "ValveBiped.polySurface343"
+$renamebone "polySurface112" "ValveBiped.polySurface112"
+$renamebone "polySurface320" "ValveBiped.polySurface320"
+$renamebone "UpDown" "ValveBiped.UpDown"
+$renamebone "LeftRight" "ValveBiped.LeftRight"
+$renamebone "left_hand" "ValveBiped.left_hand"
+$renamebone "right_hand" "ValveBiped.right_hand"
+$renamebone "flash" "ValveBiped.flash"
+$renamebone "flashlight" "ValveBiped.flashlight"
+$renamebone "w_model" "ValveBiped.w_model"
+
+//M60
+$renamebone "W_m60" "ValveBiped.W_m60"
+$renamebone "group4" "ValveBiped.group4"
+$renamebone "group5" "ValveBiped.group5"
+$renamebone "pCube45" "ValveBiped.pCube45"
+$renamebone "pCube43" "ValveBiped.pCube43"
+$renamebone "pCube46" "ValveBiped.pCube46"
+$renamebone "polySurface347" "ValveBiped.polySurface347"
+$renamebone "polySurface374" "ValveBiped.polySurface374"
+$renamebone "pCylinder27" "ValveBiped.pCylinder27"
+
+//Minigun
+$renamebone "Barrels" "ValveBiped.Barrels"
+
+//Pistols
+$renamebone "pasted__pistol_L" "ValveBiped.pasted__pistol_L"
+$renamebone "pasted__pistol_R" "ValveBiped.pasted__pistol_R"
+$renamebone "w_pistol_B" "ValveBiped.w_pistol_B"
+$renamebone "w_pistol_A_dual" "ValveBiped.w_pistol_A_dual"
+$renamebone "polySurface402" "ValveBiped.polySurface402"
+$renamebone "polySurface403" "ValveBiped.polySurface403"
+$renamebone "pCube1" "ValveBiped.pCube1"
+
+//Desert Eagle
+$renamebone "w_desert_eagle" "ValveBiped.w_desert_eagle"
+
+//Desert Rifle
+$renamebone "w_rifle_B" "ValveBiped.w_rifle_B"
+$renamebone "polysurface167" "ValveBiped.polysurface167"
+
+//Pumpshotgun
+$renamebone "w_pump_shotgun" "ValveBiped.w_pump_shotgun"
+$renamebone "weapon_bone_pump" "ValveBiped.weapon_bone_pump"
+$renamebone "pCylinder29" "ValveBiped.pCylinder29"
+$renamebone "group3" "ValveBiped.group3"
+
+//Ak47
+$renamebone "polysurface32" "ValveBiped.polysurface32"
+$renamebone "polysurface104" "ValveBiped.polysurface104"
+$renamebone "polysurface112" "ValveBiped.polysurface112"
+$renamebone "polysurface113" "ValveBiped.polysurface113"
+$renamebone "polysurface83" "ValveBiped.polysurface83"
+$renamebone "polysurface116" "ValveBiped.polysurface116"
+$renamebone "polysurface115" "ValveBiped.polysurface115"
+$renamebone "polysurface114" "ValveBiped.polysurface114"
+$renamebone "polysurface117" "ValveBiped.polysurface117"
+
+//SG553
+$renamebone "SG553" "ValveBiped.SG553"
+
+//Shotgun
+$renamebone "w_pump_shotgun" "ValveBiped.w_pump_shotgun"
+$renamebone "polysurface168" "ValveBiped.polysurface168"
+
+//Spas
+$renamebone "world" "ValveBiped.world"
+$renamebone "ring" "ValveBiped.ring"
+$renamebone "pPipe17" "ValveBiped.pPipe17"
+$renamebone "polysurface141" "ValveBiped.polysurface141"
+$renamebone "polysurface139" "ValveBiped.polysurface139"
+$renamebone "polysurface206" "ValveBiped.polysurface206"
+$renamebone "polysurface208" "ValveBiped.polysurface208"
+$renamebone "pCylinder29" "ValveBiped.pCylinder29"
+
+//SMG Silence
+$renamebone "polysurface101" "ValveBiped.polysurface101"
+$renamebone "polysurface160" "ValveBiped.polysurface160"
+$renamebone "polysurface165" "ValveBiped.polysurface165"
+$renamebone "polysurface166" "ValveBiped.polysurface166"
+$renamebone "strap" "ValveBiped.strap"
+$renamebone "w_smg_A" "ValveBiped.w_smg_A"
+
+//Mp5
+$renamebone "Mp5" "ValveBiped.Mp5"
+
+//AWP
+$renamebone "AWP" "ValveBiped.AWP"
+
+//Military Sniper
+$renamebone "W_sniper" "ValveBiped.W_sniper"
+$renamebone "long_clip1" "ValveBiped.long_clip1"
+$renamebone "polysurface261" "ValveBiped.polysurface261"
+
+//Scout Sniper
+$renamebone "Scout" "ValveBiped.Scout"
+
+
+
+
+
+
+
+////INFECTED Skeletons////
+
+//Common Infected
+$renamebone "Exp_Jaw" "ValveBiped.Exp_Jaw"
+$renamebone "Exp_Eyebrows" "ValveBiped.Exp_Eyebrows"
+$renamebone "Exp_Eyelids_Upper" "ValveBiped.Exp_Eyelids_Upper"
+$renamebone "Exp_Eyelids_Lower" "ValveBiped.Exp_Eyelids_Lower"
+$renamebone "Exp_LipsUpper" "ValveBiped.Exp_LipsUpper"
+$renamebone "Exp_Nose" "ValveBiped.Exp_Nose"
+$renamebone "Exp_LipsLower" "ValveBiped.Exp_LipsLower"
+$renamebone "Exp_LipsUpper" "ValveBiped.Exp_LipsUpper"
+$renamebone "Exp_EyebrowsCorner" "ValveBiped.Exp_EyebrowsCorner"
+$renamebone "Exp_LipsRCorner" "ValveBiped.Exp_LipsRCorner"
+$renamebone "Exp_LipsLCorner" "ValveBiped.Exp_LipsLCorner"
+
+//Boomer/ette
+$renamebone "NeckSack1" "ValveBiped.NeckSack1"
+$renamebone "NeckSack2" "ValveBiped.NeckSack2"
+$renamebone "Jiggle_NeckSack1" "ValveBiped.Jiggle_NeckSack1"
+$renamebone "Jiggle_NeckSack2" "ValveBiped.Jiggle_NeckSack2"
+$renamebone "Jiggle_Belly" "ValveBiped.Jiggle_Belly"
+$renamebone "Jiggle_HipL" "ValveBiped.Jiggle_HipL"
+$renamebone "Jiggle_HipR" "ValveBiped.Jiggle_HipR"
+$renamebone "Jiggle_BreastR" "ValveBiped.Jiggle_BreastR"
+$renamebone "Jiggle_BreastL" "ValveBiped.Jiggle_BreastL"
+
+//Tank
+$renamebone "debris_bone" "ValveBiped.debris_bone"
+$renamebone "jiggle_Tongue01" "ValveBiped.jiggle_Tongue01"
+$renamebone "jiggle_Tongue2" "ValveBiped.jiggle_Tongue2"
+
+//Smoker
+$renamebone "jiggle_tongue1" "ValveBiped.jiggle_tongue1"
+$renamebone "jiggle_tongue2" "ValveBiped.jiggle_tongue2"
+$renamebone "jiggle_tongue3" "ValveBiped.jiggle_tongue3"
+$renamebone "jiggle_meatbeard" "ValveBiped.jiggle_meatbeard"
+$renamebone "jiggle_tentacle_A1" "ValveBiped.jiggle_tentacle_A1"
+$renamebone "jiggle_tentacle_A2" "ValveBiped.jiggle_tentacle_A2"
+$renamebone "jiggle_tentacle_A3" "ValveBiped.jiggle_tentacle_A3"
+$renamebone "jiggle_tentacle_C" "ValveBiped.jiggle_tentacle_C"
+$renamebone "jiggle_tentacle_D" "ValveBiped.jiggle_tentacle_D"
+
+//Smoker Tongue
+$renamebone "shoulder_2" "ValveBiped.shoulder_2"
+$renamebone "hand_attach_chest" "ValveBiped.hand_attach_chest"
+$renamebone "chest_1" "ValveBiped.chest_1"
+$renamebone "waist_back_2" "ValveBiped.waist_back_2"
+$renamebone "waist_back_1" "ValveBiped.waist_back_1"
+$renamebone "thigh_1" "ValveBiped.thigh_1"
+$renamebone "thigh_2" "ValveBiped.thigh_2"
+$renamebone "thigh_3" "ValveBiped.thigh_3"
+$renamebone "shoulder_1" "ValveBiped.shoulder_1"
+$renamebone "back_1" "ValveBiped.back_1"
+$renamebone "hand_attach_waist" "ValveBiped.hand_attach_waist"
+
+//Witch
+$renamebone "jiggle_bangA_1" "ValveBiped.jiggle_bangA_1"
+$renamebone "jiggle_bangA_2" "ValveBiped.jiggle_bangA_2"
+$renamebone "jiggle_bangA_3" "ValveBiped.jiggle_bangA_3"
+$renamebone "jiggle_bangB_1" "ValveBiped.jiggle_bangB_1"
+$renamebone "jiggle_bangB_2" "ValveBiped.jiggle_bangB_2"
+$renamebone "jiggle_bangB_3" "ValveBiped.jiggle_bangB_3"
+$renamebone "jiggle_bangC_1" "ValveBiped.jiggle_bangC_1"
+$renamebone "jiggle_bangC_2" "ValveBiped.jiggle_bangC_2"
+$renamebone "jiggle_bangC_3" "ValveBiped.jiggle_bangC_3"
+$renamebone "jiggle_RsideA_1" "ValveBiped.jiggle_RsideA_1"
+$renamebone "jiggle_RsideA_2" "ValveBiped.jiggle_RsideA_2"
+$renamebone "jiggle_LsideA_1" "ValveBiped.jiggle_LsideA_1"
+$renamebone "jiggle_LsideA_2" "ValveBiped.jiggle_LsideA_2"
+$renamebone "jiggle_veil1" "ValveBiped.jiggle_veil1"
+$renamebone "jiggle_veil2" "ValveBiped.jiggle_veil2"
+$renamebone "jiggle_veil3" "ValveBiped.jiggle_veil3"
+$renamebone "jiggle_dress_front1" "ValveBiped.jiggle_dress_front1"
+$renamebone "jiggle_dress_front2" "ValveBiped.jiggle_dress_front2"
+$renamebone "jiggle_dress_front3" "ValveBiped.jiggle_dress_front3"
+$renamebone "jiggle_dress_Rhip1" "ValveBiped.jiggle_dress_Rhip1"
+$renamebone "jiggle_dress_Rhip2" "ValveBiped.jiggle_dress_Rhip2"
+$renamebone "jiggle_dress_Rhip3" "ValveBiped.jiggle_dress_Rhip3"
+$renamebone "jiggle_dress_Rear1" "ValveBiped.jiggle_dress_Rear1"
+$renamebone "jiggle_dress_Rear2" "ValveBiped.jiggle_dress_Rear2"
+$renamebone "jiggle_dress_Rear3" "ValveBiped.jiggle_dress_Rear3"
+$renamebone "jiggle_dress_Lside1" "ValveBiped.jiggle_dress_Lside1"
+$renamebone "jiggle_dress_Lside2" "ValveBiped.jiggle_dress_Lside2"
+$renamebone "jiggle_dress_Rside1" "ValveBiped.jiggle_dress_Rside1"
+$renamebone "jiggle_dress_Rside2" "ValveBiped.jiggle_dress_Rside2"
+$renamebone "jiggle_dress_Lfront1" "ValveBiped.jiggle_dress_Lfront1"
+$renamebone "jiggle_dress_Lfront2" "ValveBiped.jiggle_dress_Lfront2"
+$renamebone "jiggle_dress_Lfront3" "ValveBiped.jiggle_dress_Lfront3"
+
+//TF2
+$renamebone "bip_pelvis" "ValveBiped.Bip01_Pelvis"
+$renamebone "Bip01_L_Thigh" "ValveBiped.Bip01_L_Thigh"
+$renamebone "Bip01_L_Calf" "ValveBiped.Bip01_L_Calf"
+$renamebone "Bip01_L_Foot" "ValveBiped.Bip01_L_Foot"
+$renamebone "Bip01_L_Toe0" "ValveBiped.Bip01_L_Toe0"
+$renamebone "Bip01_R_Thigh" "ValveBiped.Bip01_R_Thigh"
+$renamebone "Bip01_R_Foot" "ValveBiped.Bip01_R_Foot"
+$renamebone "Bip01_R_Toe0" "ValveBiped.Bip01_R_Toe0"
+$renamebone "bip_spine_0" "ValveBiped.Bip01_Spine"
+$renamebone "bip_spine_1" "ValveBiped.Bip01_Spine1"
+$renamebone "bip_spine_2" "ValveBiped.Bip01_Spine2"
+$renamebone "bip_spine_3" "ValveBiped.Bip01_Spine4"
+$renamebone "bip_neck" "ValveBiped.Bip01_Neck1"
+$renamebone "bip_head" "ValveBiped.Bip01_Head1"
+$renamebone "Bip01_L_Clavicle" "ValveBiped.Bip01_L_Clavicle"
+$renamebone "Bip01_L_UpperArm" "ValveBiped.Bip01_L_UpperArm"
+$renamebone "Bip01_L_Forearm" "ValveBiped.Bip01_L_Forearm"
+$renamebone "Bip01_L_Hand" "ValveBiped.Bip01_L_Hand"
+$renamebone "Bip01_R_Clavicle" "ValveBiped.Bip01_R_Clavicle"
+$renamebone "Bip01_R_UpperArm" "ValveBiped.Bip01_R_UpperArm"
+$renamebone "Bip01_R_Forearm" "ValveBiped.Bip01_R_Forearm"
+$renamebone "Bip01_R_Hand" "ValveBiped.Bip01_R_Hand"
+

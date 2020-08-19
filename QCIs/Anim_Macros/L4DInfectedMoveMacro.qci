@@ -1,0 +1,38 @@
+//  
+// 	
+//  L4D MOVE MACRO:  
+//			This macro is useful for creating 8-way movement sequences. It relies on using a strict naming 
+//			convention for your dmx's. (character_movement(direction)_weapon) (ex. coach_runN_rifle).
+//			The rStep and lStep inputs are for footstep events. enter the frames where the feet contact the ground
+//	
+//	Usage: 		L4DmoveMacro <char> <move> <weapon> <aim_matrix> <idle(dmx)> <activity> <rStep1> <lStep1> <rStep2>  <lStep2>
+//	Example: $L4DMoveMacro 	coach 	run 	rifle 	coach_aimmatrix_rifle_standing	coach_idle_standing_rifle act_run_rifle 17 36 7 26
+//
+//
+//
+//
+$definemacro L4DInfectedMoveMacro char move aim idle act rStep1 lStep1  \\
+	$animation a_$idle$_$move$							$idle$ \\
+	$animation a_$char$_$move$N		$char$_$move$N 	loop LX LY \\
+	$animation a_$char$_$move$S 	$char$_$move$S	loop LX LY \\
+	$animation a_$char$_$move$E		$char$_$move$E 	loop LX LY \\
+	$animation a_$char$_$move$W 	$char$_$move$W 	loop LX LY \\
+	$animation a_$char$_$move$NE 	$char$_$move$NE loop LX LY \\          
+	$animation a_$char$_$move$NW	$char$_$move$NW loop LX LY \\          
+	$animation a_$char$_$move$SE 	$char$_$move$SE loop LX LY \\          
+	$animation a_$char$_$move$SW 	$char$_$move$SW loop LX LY \\          
+	$sequence $char$_$move$ { \\
+		a_$char$_$move$NE	a_$char$_$move$N	a_$char$_$move$NW	\\
+		a_$char$_$move$E  a_$idle$_$move$		a_$char$_$move$W  \\
+		a_$char$_$move$SE	a_$char$_$move$S	a_$char$_$move$SW \\
+		blendwidth 3 blend move_y -1 1 blend move_x 1 -1                        \\
+		addlayer $aim$																													\\	
+		activity $act$	1																												\\
+		 event AE_FOOTSTEP_RIGHT $rStep1$																				\\
+		 event AE_FOOTSTEP_LEFT $lStep1$ 																				\\
+	}																																					\\
+
+
+
+
+

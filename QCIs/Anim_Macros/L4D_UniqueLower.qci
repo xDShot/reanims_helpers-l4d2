@@ -1,0 +1,2 @@
+	$definemacro UniqueLower move weapon fps loopstart lastframe fixloop rotate \\
+		$animation a_$move$_$weapon$	NamVet_$move$_$weapon$ noautoik fps $fps$  startloop $loopstart$  frame 0 $lastframe$  fixuploop -$fixloop$ $fixloop$ LX LY loop alignto Idle_Standing_Align rotateto $rotate$ cmdlist IK_to_BBox \\

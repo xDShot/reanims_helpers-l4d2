@@ -1,0 +1,50 @@
+//-----------------------------------------------------------------------------------
+// Weapon Aim Layer
+// 	name - unique identifier for the weapon (TF - PRIMARY, SECONDARY, MELEE, GRENADE, etc.)
+//-----------------------------------------------------------------------------------
+$definemacro MPJumpStart9Way name blendlayername infonode \\
+$animation a_jumpStart_$name$ $name$_jumpCenter blockname $infonode$ z alignto a_reference frames 0 15 \\
+$animation a_jumpStart_N_$name$ $name$_jumpN blockname $infonode$ z alignto a_reference LX LY frames 0 15 \\
+$animation a_jumpStart_NE_$name$ $name$_jumpNE blockname $infonode$ z alignto a_reference LX LY frames 0 15 \\
+$animation a_jumpStart_NW_$name$ $name$_jumpNW blockname $infonode$ z alignto a_reference LX LY frames 0 15 \\
+$animation a_jumpStart_E_$name$ $name$_jumpE blockname $infonode$ z alignto a_reference LX LY frames 0 15 \\
+$animation a_jumpStart_SE_$name$ $name$_jumpSE blockname $infonode$ z alignto a_reference LX LY frames 0 15 \\
+$animation a_jumpStart_W_$name$ $name$_jumpW blockname $infonode$ z alignto a_reference LX LY frames 0 15 \\
+$animation a_jumpStart_SW_$name$ $name$_jumpSW blockname $infonode$ z alignto a_reference LX LY frames 0 15 \\
+$animation a_jumpStart_S_$name$ $name$_jumpS blockname $infonode$ z alignto a_reference LX LY frames 0 15 \\
+$sequence Jump_Start_$name$ { \\
+	a_jumpStart_SW_$name$	a_jumpStart_S_$name$		a_jumpStart_SE_$name$ \\
+	a_jumpStart_W_$name$		a_jumpStart_$name$	a_jumpStart_E_$name$ \\
+	a_jumpStart_NW_$name$	a_jumpStart_N_$name$		a_jumpStart_NE_$name$ \\
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1 \\
+	//addlayer $blendlayername$ \\
+	//addlayer $name$_aimmatrix_idle \\
+	activity ACT_MP_JUMP_START_$name$ 1 \\
+	//noautoik \\
+} \\
+$animation a_jumpFloat_$name$ $name$_jumpCenter frames 15 15 numframes 30 loop blockname $infonode$ z alignto a_reference \\
+$animation a_jumpFloat_N_$name$ $name$_jumpN frames 15 15 numframes 30 loop blockname $infonode$ z alignto a_reference LX LY \\
+$animation a_jumpFloat_NE_$name$ $name$_jumpNE frames 15 15 numframes 30 loop blockname $infonode$ z alignto a_reference LX LY \\
+$animation a_jumpFloat_NW_$name$ $name$_jumpNW frames 15 15 numframes 30 loop blockname $infonode$ z alignto a_reference LX LY \\
+$animation a_jumpFloat_E_$name$ $name$_jumpE frames 15 15 numframes 30 loop blockname $infonode$ z alignto a_reference LX LY \\
+$animation a_jumpFloat_SE_$name$ $name$_jumpSE frames 15 15 numframes 30 loop blockname $infonode$ z alignto a_reference LX LY \\
+$animation a_jumpFloat_W_$name$ $name$_jumpW frames 15 15 numframes 30 loop blockname $infonode$ z alignto a_reference LX LY \\
+$animation a_jumpFloat_SW_$name$ $name$_jumpSW frames 15 15 numframes 30 loop blockname $infonode$ z alignto a_reference LX LY \\
+$animation a_jumpFloat_S_$name$ $name$_jumpS frames 15 15 numframes 30 loop blockname $infonode$ z alignto a_reference LX LY \\
+$sequence Jump_Float_$name$ { \\
+	a_jumpFloat_SW_$name$	a_jumpFloat_S_$name$		a_jumpFloat_SE_$name$ \\
+	a_jumpFloat_W_$name$		a_jumpFloat_$name$	a_jumpFloat_E_$name$ \\
+	a_jumpFloat_NW_$name$	a_jumpFloat_N_$name$		a_jumpFloat_NE_$name$ \\
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1 \\
+	addlayer $blendlayername$ \\
+	addlayer $name$_aimmatrix_idle \\
+	activity ACT_MP_JUMP_FLOAT_$name$ 1 \\
+	//noautoik \\
+} \\
+$sequence jumpLand_$name$ { \\
+	$name$_jumpLand \\
+	subtract jumpLand_$name$ 0 \\
+	iklock rfoot 1 0 iklock lfoot 1 0 \\
+	delta \\
+	activity ACT_MP_JUMP_LAND_$name$ 1 \\
+}

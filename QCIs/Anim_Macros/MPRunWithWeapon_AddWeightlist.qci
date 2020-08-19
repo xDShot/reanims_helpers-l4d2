@@ -1,0 +1,38 @@
+// Macro: MPRunWithWeapon
+//
+// NOTE: Assumes the files of the "movename" exist.  For example, if movename = Run, then RunN, RunNE, RunE, etc.
+//       are the .smd filenames for the 9-way movement.
+//
+// Usage: MPRunWithWeapon name fS fSE fE fNE fN fNW fW fSW filename aimmatrix activityname
+//	- name: unique id
+//	- fS, fSE, fE, fNE, fN, fNW, fW, fSW: startloop frame numbers for S, SE, etc.
+//	- filename1: name of the moveN filename
+//	- filename2: name of the idle pose filename
+//	- aimmatrix: the name of the aimmatrix for the movement type
+//	- weightlist:  the weightlist for the upperbody composite
+//	- activity: the name of the movement activity
+//
+// Example: MPRunWithWeapon_AddWeightlist PRIMARY 0 0 0 0 0 0 0 0 primary_RunN primary_idle primary_aim_run upperbodyblend ACT_MP_RUN_PRIMARY
+//
+$definemacro MPRunWithWeapon_AddWeightlist name fS fSE fE fNE fN fNW fW fSW filename1 filename2 aimmatrix activityname weightlist infoNode \\
+$animation a_blend_runN_$name$ $filename1$ ikrule lhand touch "weapon_bone" noautoik blockname $infoNode$ lx ly \\
+$animation a_runCenter_$name$  $filename2$ blockname $infoNode$ loop noautoik ikrule lhand touch "bip_hand_R" alignto a_reference \\
+$MakeLoopMoveIK_weightlist runS_$name$  primary_runs    $fS$  -180 a_reference  a_blend_runN_$name$ $weightlist$ $infoNode$ \\
+$MakeLoopMoveIK_weightlist runSE_$name$ primary_runse   $fSE$ -135 a_reference  a_blend_runN_$name$ $weightlist$ $infoNode$ \\
+$MakeLoopMoveIK_weightlist runE_$name$  primary_rune    $fE$   -90 a_reference  a_blend_runN_$name$ $weightlist$ $infoNode$ \\ 
+$MakeLoopMoveIK_weightlist runNE_$name$ primary_runne   $fNE$  -45 a_reference  a_blend_runN_$name$ $weightlist$ $infoNode$ \\
+$MakeLoopMoveIK_weightlist runN_$name$  $name$_runn    $fN$     0 a_reference  a_blend_runN_$name$ $weightlist$ $infoNode$ \\
+$MakeLoopMoveIK_weightlist runNW_$name$ primary_runnw   $fNW$   45 a_reference  a_blend_runN_$name$ $weightlist$ $infoNode$ \\
+$MakeLoopMoveIK_weightlist runW_$name$  primary_runw    $fW$    90 a_reference  a_blend_runN_$name$ $weightlist$ $infoNode$ \\
+$MakeLoopMoveIK_weightlist runSW_$name$ primary_runsw   $fSW$  135 a_reference  a_blend_runN_$name$ $weightlist$ $infoNode$ \\
+$sequence Run_$name$ { \\
+	a_runsw_$name$	a_runS_$name$		a_runSE_$name$ \\
+	a_runW_$name$	a_runCenter_$name$	a_runE_$name$ \\
+	a_runNW_$name$	a_runN_$name$		a_runNE_$name$ \\
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1 \\
+	addlayer $aimmatrix$ \\
+	activity $activityname$ 1 \\
+	noautoik \\
+	{ event 7001 12 "lfoot" } \\
+	{ event 7001 5 "rfoot" } \\
+} \\

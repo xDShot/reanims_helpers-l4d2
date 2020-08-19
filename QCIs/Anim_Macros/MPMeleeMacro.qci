@@ -1,0 +1,39 @@
+//
+//	This macro is for melee attacks with the ranged weapons, not the l4d2 melee weapons.
+//
+//	$definemacro MeleeMacro <character> <weapon> <melee> <fps> <start> <end> <b1> <b2> <b3> <b4> <AimMatrix> <AimMatrixRun> \\
+//		
+//
+//
+//
+//
+//
+//	$MeleeMacro coach			Rifle 	Shove 		35 	13 51 	0 5 25 38	coach_AimMatrix_Melee_Shove_Rifle_Standing			coach_AimMatrix_Melee_Shove_Rifle_Standing
+
+	$definemacro MeleeMacro char weapon melee fps start end b1 b2 b3 b4 AimMatrix AimMatrixRun \\
+	$sequence Melee_$melee$_Standing_$weapon$_layer		$char$_Melee_$melee$_Rifle_Standing fps $fps$ frame $start$ $end$ hidden \\
+	$sequence Melee_$melee$_Standing_$weapon$					$char$_Melee_$melee$_Rifle_Standing fps $fps$ frame $start$ $end$ weightlist NONE blendlayer Melee_$melee$_Standing_$weapon$_layer $b1$ $b2$ $b3$ $b4$ spline blendlayer $AimMatrix$ $b1$ $b2$ $b3$ $b4$ spline activity ACT_MELEE_$melee$_$weapon$_IDLE 1 \\
+	$sequence Melee_$melee$_Running_$weapon$_subtract	$char$_Melee_$melee$_Rifle_Running hidden \\
+	$sequence Melee_$melee$_Running_$weapon$_Delta 		$char$_Melee_$melee$_Rifle_Running x y z frame $start$ $end$ weightlist MELEE_WS_DELTA subtract Melee_$melee$_Running_$weapon$_subtract 0 iklock lfoot 1 0 iklock rfoot 1 0 delta hidden \\
+	$sequence Melee_$melee$_Running_$weapon$_layer		$char$_Melee_$melee$_Rifle_Running fps $fps$ x y z frame $start$ $end$ weightlist MELEE_WS worldspace iklock lfoot 1 0 iklock rfoot 1 0 hidden \\
+	$sequence Melee_$melee$_Running_$weapon$					$char$_Melee_$melee$_Rifle_Running fps $fps$ x y z frame $start$ $end$ weightlist NONE blendlayer Melee_$melee$_Running_$weapon$_Delta $b1$ $b2$ $b3$ $b4$ spline blendlayer Melee_$melee$_Running_$weapon$_layer $b1$ $b2$ $b3$ $b4$ spline blendlayer $AimMatrixRun$ $b1$ $b2$ $b3$ $b4$ spline activity ACT_MELEE_$melee$_$weapon$_RUN 1 \\
+
+$definemacro RifleMeleeMacro char weapon melee fps start end b1 b2 b3 b4 AimMatrix AimMatrixRun \\
+	$sequence Melee_$melee$_Standing_$weapon$_layer		$char$_Melee_$melee$_Rifle_Standing fps $fps$ frame $start$ $end$ hidden \\
+	$sequence Melee_$melee$_Standing_$weapon$					$char$_Melee_$melee$_Rifle_Standing fps $fps$ frame $start$ $end$ weightlist SPINE_ON  blendlayer $AimMatrix$ $b1$ $b2$ $b3$ $b4$ spline activity ACT_MELEE_$melee$_$weapon$_IDLE 1 \\
+	$sequence Melee_$melee$_Running_$weapon$_subtract	$char$_Melee_$melee$_Rifle_Running hidden \\
+	$sequence Melee_$melee$_Running_$weapon$_Delta 		$char$_Melee_$melee$_Rifle_Running x y z frame $start$ $end$ weightlist MELEE_WS_DELTA subtract Melee_$melee$_Running_$weapon$_subtract 0 iklock lfoot 1 0 iklock rfoot 1 0 delta hidden \\
+	$sequence Melee_$melee$_Running_$weapon$_layer		$char$_Melee_$melee$_Rifle_Running fps $fps$ x y z frame $start$ $end$ weightlist MELEE_WS worldspace iklock lfoot 1 0 iklock rfoot 1 0 hidden \\
+	$sequence Melee_$melee$_Running_$weapon$					$char$_Melee_$melee$_Rifle_Running fps $fps$ x y z frame $start$ $end$ weightlist NONE blendlayer Melee_$melee$_Running_$weapon$_Delta $b1$ $b2$ $b3$ $b4$ spline blendlayer Melee_$melee$_Running_$weapon$_layer $b1$ $b2$ $b3$ $b4$ spline blendlayer $AimMatrixRun$ $b1$ $b2$ $b3$ $b4$ spline activity ACT_MELEE_$melee$_$weapon$_RUN 1 \\
+
+
+//OLD MACRO!
+/*
+	$definemacro MeleeMacro weapon melee fps start end b1 b2 b3 b4 AimMatrix AimMatrixRun \\
+	$sequence Melee_$melee$_Standing_$weapon$_layer		NamVet_Melee_$melee$_Rifle_Standing fps $fps$ frame $start$ $end$ hidden \\
+	$sequence Melee_$melee$_Standing_$weapon$		NamVet_Melee_$melee$_Rifle_Standing fps $fps$ frame $start$ $end$ weightlist NONE blendlayer Melee_$melee$_Standing_$weapon$_layer $b1$ $b2$ $b3$ $b4$ spline blendlayer $AimMatrix$ $b1$ $b2$ $b3$ $b4$ spline activity ACT_MELEE_$melee$_$weapon$_IDLE 1 \\
+	$sequence Melee_$melee$_Running_$weapon$_subtract	NamVet_Melee_$melee$_Rifle_Running hidden \\
+	$sequence Melee_$melee$_Running_$weapon$_Delta 		NamVet_Melee_$melee$_Rifle_Running x y z frame $start$ $end$ weightlist MELEE_WS_DELTA subtract Melee_$melee$_Running_$weapon$_subtract 0 iklock lfoot 1 0 iklock rfoot 1 0 delta hidden \\
+	$sequence Melee_$melee$_Running_$weapon$_layer		NamVet_Melee_$melee$_Rifle_Running fps $fps$ x y z frame $start$ $end$ weightlist MELEE_WS worldspace iklock lfoot 1 0 iklock rfoot 1 0 hidden \\
+	$sequence Melee_$melee$_Running_$weapon$		NamVet_Melee_$melee$_Rifle_Running fps $fps$ x y z frame $start$ $end$ weightlist NONE blendlayer Melee_$melee$_Running_$weapon$_Delta $b1$ $b2$ $b3$ $b4$ spline blendlayer Melee_$melee$_Running_$weapon$_layer $b1$ $b2$ $b3$ $b4$ spline blendlayer $AimMatrixRun$ $b1$ $b2$ $b3$ $b4$ spline activity ACT_MELEE_$melee$_$weapon$_RUN 1 \\
+*/

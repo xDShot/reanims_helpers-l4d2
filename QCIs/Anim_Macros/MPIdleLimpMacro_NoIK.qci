@@ -1,0 +1,13 @@
+		$definemacro IdleLimpNoIKMacro sequence ZeroMove frame aimlayer Idlenoise fadein fadeout activity \\
+		$animation a_$ZeroMove$		$ZeroMove$	noautoik fps 40 frame $frame$ $frame$ numframes 242 loop cmdlist IK_to_BBox \\
+		$sequence $ZeroMove$_layer	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop x y z iklock lfoot 1 0 iklock rfoot 1 0 weightlist PELVIS100ARMS0 worldspace hidden \\
+		$sequence $ZeroMove$_arms	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop weightlist CLAVICLES_ONLY ikrule lhand release hidden \\
+		$sequence $sequence$ { \\
+			a_$ZeroMove$ \\
+			loop \\
+			blendlayer $ZeroMove$_layer 0 0 0 0 local \\ 
+			addlayer $ZeroMove$_arms \\
+			addlayer $aimlayer$ addlayer $Idlenoise$ \\ 
+			fadein $fadein$ fadeout $fadeout$ \\
+			activity $activity$ -1 \\ 
+			} \\

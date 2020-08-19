@@ -1,0 +1,25 @@
+	$definemacro MiniGunAimMacro filename \\
+		$animation	a_$filename$_neutral		$filename$ frame 40 40 \\
+		$animation	a_$filename$_down_right		$filename$ frame 0 0 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_down_center	$filename$ frame 10 10 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_down_left		$filename$ frame 20 20 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_middown_right	$filename$ frame 85 85 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_middown_center	$filename$ frame 90 90 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_middown_left	$filename$ frame 95 95 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_mid_right		$filename$ frame 30 30 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_mid_center		$filename$ frame 40 40 noanimation \\
+		$animation	a_$filename$_mid_left		$filename$ frame 50 50 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_up_right		$filename$ frame 60 60 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_up_center		$filename$ frame 70 70 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_up_left		$filename$ frame 80 80 subtract a_$filename$_neutral 0 \\
+		$sequence $filename$ { \\
+			a_$filename$_up_right a_$filename$_up_center a_$filename$_up_left \\
+			a_$filename$_mid_right a_$filename$_mid_center a_$filename$_mid_left \\
+			a_$filename$_middown_right a_$filename$_middown_center a_$filename$_middown_left \\
+			a_$filename$_down_right a_$filename$_down_center a_$filename$_down_left \\
+			blendref a_$filename$_neutral \\
+			blendcenter a_$filename$_mid_center \\
+			blendwidth 3 blend body_yaw -90 90 blend body_pitch -30 60 \\
+			delta \\
+			hidden \\
+			} \\

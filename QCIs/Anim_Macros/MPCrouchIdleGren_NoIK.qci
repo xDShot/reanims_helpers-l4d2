@@ -1,0 +1,2 @@
+$definemacro CrouchIdleGrenNoIKMacro sequence filename frame aimmatrix Idlenoise fadeout fadein activity \\
+		$sequence $sequence$ $filename$ frame $frame$ $frame$ addlayer $aimmatrix$ fps 40 numframes 242 loop addlayer $Idlenoise$ fadeout $fadeout$ fadein $fadein$ activity $activity$ -1 cmdlist IK_to_BBox alignto Idle_Standing_Align addlayer Gren_Pull_Back_layer \\

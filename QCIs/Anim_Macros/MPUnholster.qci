@@ -1,0 +1,19 @@
+//
+//
+//
+
+	$definemacro UnholsterMacro char weapon anim fps b1 b2 b3 b4 hide \\	
+		$sequence Unholster_Standing_$weapon$_layer $char$_Unholster_$anim$ fps $fps$ weightlist RELOAD hidden \\
+		$sequence Unholster_Standing_$weapon$ $char$_Unholster_$anim$ fps $fps$ weightlist NONE blendlayer Unholster_Standing_$weapon$_layer $b1$ $b2$ $b3$ $b4$ { event AE_HIDE_WEAPON 0 $hide$ } activity ACT_DEPLOY_$anim$ -1 \\
+
+	$definemacro UnholsterMacroSND char weapon anim snd fps b1 b2 b3 b4 hide \\	
+		$sequence Unholster_Standing_$weapon$_layer $char$_Unholster_$anim$ fps $fps$ weightlist RELOAD hidden \\
+		$sequence Unholster_Standing_$weapon$ $char$_Unholster_$anim$ fps $fps$ weightlist NONE blendlayer Unholster_Standing_$weapon$_layer $b1$ $b2$ $b3$ $b4$ { event AE_HIDE_WEAPON 0 $hide$ } { event 5004 1 $snd$ } activity ACT_DEPLOY_$anim$ -1 \\
+
+
+//OLD
+/*
+	$definemacro UnholsterMacro weapon anim fps b1 b2 b3 b4 hide \\	
+		$sequence Unholster_Standing_$weapon$_layer NamVet_Unholster_$anim$ fps $fps$ weightlist RELOAD hidden \\
+		$sequence Unholster_Standing_$weapon$ NamVet_Unholster_$anim$ fps $fps$ weightlist NONE blendlayer Unholster_Standing_$weapon$_layer $b1$ $b2$ $b3$ $b4$ { event AE_HIDE_WEAPON 0 $hide$ } activity ACT_DEPLOY_$anim$ -1 \\
+*/

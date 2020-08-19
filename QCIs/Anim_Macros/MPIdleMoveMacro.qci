@@ -1,0 +1,82 @@
+//  
+// 	
+//	Idle Move Macro - on L4D, idles also contained motion that would start based on the walk_x parameter. For L4D2, we knocked that out.
+//  
+//	
+//	
+//  IdleMoveMacro <sequence> <ZeroMove> <frame> <aimlayer> <Idlenoise> <fadein> <fadeout> <activity> //<alignAnim> \\
+//	
+// 	TODO: generalize the alignment animation. 
+
+$definemacro IdleMoveMacro sequence ZeroMove frame aimlayer Idlenoise fadein fadeout activity  \\
+$animation a_$ZeroMove$		$ZeroMove$	noautoik fps 40 frame $frame$ $frame$ numframes 242 loop cmdlist IK_to_BBox alignto Idle_Standing_Align \\
+$sequence $ZeroMove$_layer	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop x y z iklock lfoot 1 0 iklock rfoot 1 0 weightlist PELVIS100ARMS0 worldspace hidden alignto Idle_Standing_Align \\
+$sequence $ZeroMove$_arms	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop ikrule lhand touch "ValveBiped.Bip01_R_Hand" weightlist CLAVICLES_ONLY hidden \\
+$sequence $sequence$ { \\
+			a_$ZeroMove$ \\
+			loop \\
+			blendlayer $ZeroMove$_layer 0 0 0 0 local \\
+			addlayer $ZeroMove$_arms \\
+			addlayer $aimlayer$ addlayer $Idlenoise$ \\ 
+			fadein $fadein$ fadeout $fadeout$ \\
+			activity $activity$ 1 \\ 
+} \\
+
+$definemacro IdleMoveMacro3 sequence Name ZeroMove frame aimlayer Idlenoise fadein fadeout activity  \\
+$animation a_$Name$		$ZeroMove$	noautoik fps 40 frame $frame$ $frame$ numframes 242 loop cmdlist IK_to_BBox alignto Idle_Standing_Align \\
+$sequence $Name$_layer	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop x y z iklock lfoot 1 0 iklock rfoot 1 0 weightlist PELVIS100ARMS0 worldspace hidden alignto Idle_Standing_Align \\
+$sequence $Name$_arms	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop ikrule lhand touch "ValveBiped.Bip01_R_Hand" weightlist CLAVICLES_ONLY hidden \\
+$sequence $sequence$ { \\
+			a_$Name$ \\
+			loop \\
+			blendlayer $Name$_layer 0 0 0 0 local \\
+			addlayer $Name$_arms \\
+			addlayer $aimlayer$ addlayer $Idlenoise$ \\ 
+			fadein $fadein$ fadeout $fadeout$ \\
+			activity $activity$ 1 \\ 
+} \\
+
+$definemacro IdleMoveMacroActNum sequence ZeroMove frame aimlayer Idlenoise fadein fadeout activity number \\
+$animation a_$ZeroMove$		$ZeroMove$	noautoik fps 40 frame $frame$ $frame$ numframes 242 loop cmdlist IK_to_BBox alignto Idle_Standing_Align \\
+$sequence $ZeroMove$_layer	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop x y z iklock lfoot 1 0 iklock rfoot 1 0 weightlist PELVIS100ARMS0 worldspace hidden alignto Idle_Standing_Align \\
+$sequence $ZeroMove$_arms	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop ikrule lhand touch "ValveBiped.Bip01_R_Hand" weightlist CLAVICLES_ONLY hidden \\
+$sequence $sequence$ { \\
+			a_$ZeroMove$ \\
+			loop \\
+			blendlayer $ZeroMove$_layer 0 0 0 0 local \\
+			addlayer $ZeroMove$_arms \\
+			addlayer $aimlayer$ addlayer $Idlenoise$ \\ 
+			fadein $fadein$ fadeout $fadeout$ \\
+			activity $activity$ $number$ \\ 
+} \\
+
+$definemacro IdleMoveMacroTA sequence ZeroMove frame aimlayer Idlenoise fadein fadeout activity  \\
+$animation a_$ZeroMove$		$ZeroMove$	noautoik fps 40 frame $frame$ $frame$ numframes 242 loop cmdlist IK_to_BBox alignto Idle_Standing_Align \\
+$sequence $ZeroMove$_layer	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop x y z iklock lfoot 1 0 iklock rfoot 1 0 weightlist PELVIS100ARMS0 worldspace hidden alignto Idle_Standing_Align \\
+$sequence $ZeroMove$_arms	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop ikrule lhand touch "ValveBiped.weapon_bone" weightlist CLAVICLES_ONLY hidden \\
+$sequence $sequence$ { \\
+			a_$ZeroMove$ \\
+			loop \\
+			blendlayer $ZeroMove$_layer 0 0 0 0 local \\
+			addlayer $ZeroMove$_arms \\
+			addlayer $aimlayer$ addlayer $Idlenoise$ \\ 
+			fadein $fadein$ fadeout $fadeout$ \\
+			activity $activity$ 1 \\ 
+} \\
+			
+			
+// OLD MACRO
+/*
+	$definemacro IdleMoveMacro sequence shared ZeroMove frame aimlayer Idlenoise fadein fadeout activity \\
+		$animation a_$ZeroMove$		$ZeroMove$	noautoik fps 40 frame $frame$ $frame$ numframes 242 loop cmdlist IK_to_BBox alignto Idle_Standing_Align \\
+		$sequence $ZeroMove$_layer	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop x y z iklock lfoot 1 0 iklock rfoot 1 0 weightlist PELVIS100ARMS0 worldspace hidden alignto Idle_Standing_Align \\
+		$sequence $ZeroMove$_arms	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop ikrule lhand touch "ValveBiped.Bip01_R_Hand" weightlist CLAVICLES_ONLY hidden \\
+		$sequence $sequence$ { \\
+			a_$ZeroMove$ \\
+			blendlayer $ZeroMove$_layer 0 0 0 0 local \\
+			addlayer $ZeroMove$_arms \\
+			addlayer $aimlayer$ addlayer $Idlenoise$ \\ 
+			fadein $fadein$ fadeout $fadeout$ \\
+			activity ACT_$activity$ -1 \\ 
+			} \\
+*/

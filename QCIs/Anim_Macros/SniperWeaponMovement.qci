@@ -1,0 +1,12 @@
+//-----------------------------------------------------------------------------------
+// Weapon Movement
+// 	name - unique identifier for the weapon (TF - PRIMARY, SECONDARY, MELEE, GRENADE, etc.)
+//-----------------------------------------------------------------------------------
+$definemacro SniperWeaponMovement name infoNode \\
+$sequence Stand_$name$  $name$_idle loop alignto a_reference addlayer $name$_aimmatrix_idle activity ACT_MP_STAND_$name$ 1 ikrule lhand touch "bip_hand_R" \\
+//$sequence Crouch_$name$ $name$_crouch_idle loop alignto a_reference addlayer $name$_aimmatrix_crouch_idle  activity ACT_MP_CROUCH_$name$ 1 ikrule lhand touch "bip_hand_R" \\
+$MPRunWithWeapon        Run_$name$         0 0 0 0 0 0 0 0 $name$_runN         $name$_runCenter         $name$_aimmatrix_run         ACT_MP_RUN_$name$ $infoNode$ \\
+$MPWalkWithWeapon       Walk_$name$        0 0 0 0 0 0 0 0 $name$_walkN        $name$_walkCenter        $name$_aimmatrix_idle        ACT_MP_WALK_$name$ $infoNode$ \\
+//$MPCrouchWalkWithWeapon Crouch_Walk_$name$ 0 0 0 0 0 0 0 0 $name$_crouch_walkN $name$_crouch_walkCenter $name$_aimmatrix_crouch_walk ACT_MP_CROUCHWALK_$name$ $infoNode$ \\
+$sequence Jump_$name$ $name$_jump alignto a_reference addlayer $name$_aimmatrix_idle activity ACT_MP_JUMP_$name$ 1 ikrule lhand touch "bip_hand_R" \\
+$sequence Swim_$name$ $name$_swim loop alignto a_reference addlayer $name$_aimmatrix_idle activity ACT_MP_SWIM_$name$ 1 \\

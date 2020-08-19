@@ -1,0 +1,36 @@
+//
+//
+//
+//
+//			$definemacro FidgetMacro <char> <filename> <ikbone> <ik1> <ik2> <ik3> <ik4> <b1> <b2> <b3> <b4> \\
+//
+//
+//
+//
+//
+//
+	$definemacro FidgetMacro char filename ikbone ik1 ik2 ik3 ik4 b1 b2 b3 b4 \\
+	$sequence $filename$_Delta	$char$_$filename$ subtract $filename$_Delta 0 delta weightlist Fidget_DELTA noautoik hidden \\
+	$sequence $filename$_layer	$char$_$filename$ weightlist Fidget hidden { \\
+			ikrule lhand touch ValveBiped.Bip01_$ikbone$ range $ik1$ $ik2$ $ik3$ $ik4$ usesource \\
+			} \\
+	$sequence $filename$		$char$_$filename$ noanimation numframes 86 blendlayer $filename$_Delta $b1$ $b2$ $b3$ $b4$ blendlayer $filename$_layer $b1$ $b2$ $b3$ $b4$ activity ACT_TERROR_FIDGET -1 \\
+
+	$definemacro FidgetMacroFiller char name filename ikbone ik1 ik2 ik3 ik4 b1 b2 b3 b4 \\
+	$sequence $name$_Delta	$char$_$name$ subtract $name$_Delta 0 delta weightlist Fidget_DELTA noautoik hidden \\
+	$sequence $name$_layer	$char$_$name$ weightlist Fidget hidden { \\
+			ikrule lhand touch ValveBiped.Bip01_$ikbone$ range $ik1$ $ik2$ $ik3$ $ik4$ usesource \\
+			} \\
+	$sequence $name$		$char$_$filename$ noanimation numframes 86 blendlayer $name$_Delta $b1$ $b2$ $b3$ $b4$ blendlayer $name$_layer $b1$ $b2$ $b3$ $b4$ \\
+
+
+	
+//OLD MACRO
+/*
+	$definemacro FidgetMacro filename ikbone ik1 ik2 ik3 ik4 b1 b2 b3 b4 \\
+	$sequence $filename$_Delta	NamVet_$filename$ subtract $filename$_Delta 0 delta weightlist Fidget_DELTA noautoik hidden \\
+	$sequence $filename$_layer	NamVet_$filename$ weightlist Fidget hidden { \\
+			ikrule lhand touch ValveBiped.Bip01_$ikbone$ range $ik1$ $ik2$ $ik3$ $ik4$ usesource \\
+			} \\
+	$sequence $filename$		NamVet_$filename$ noanimation numframes 86 blendlayer $filename$_Delta $b1$ $b2$ $b3$ $b4$ blendlayer $filename$_layer $b1$ $b2$ $b3$ $b4$ activity ACT_TERROR_FIDGET -1 \\
+*/

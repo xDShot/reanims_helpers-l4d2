@@ -1,0 +1,12 @@
+//-----------------------------------------------------------------------------------
+// Weapon Attack Firing
+// 	name - unique identifier for the weapon (TF - PRIMARY, SECONDARY etc.)
+//-----------------------------------------------------------------------------------
+$definemacro SniperDeployedWeaponFiring name \\
+$SniperDeployedGestureAttack AttackStand_$name$  $name$_fire          ACT_MP_ATTACK_STAND_$name$\\
+$SniperDeployedGestureAttack AttackCrouch_$name$ $name$_crouch_fire   ACT_MP_ATTACK_CROUCH_$name$ \\
+$SniperDeployedGestureAttack AttackSwim_$name$   $name$_swim_fire     ACT_MP_ATTACK_SWIM_$name$ \\   
+$SniperDeployedGestureAttack ReloadStand_$name$  $name$_reload        ACT_MP_RELOAD_STAND_$name$ \\
+$SniperDeployedGestureAttack ReloadCrouch_$name$ $name$_crouch_reload ACT_MP_RELOAD_CROUCH_$name$ \\ 
+$SniperDeployedGestureAttack ReloadSwim_$name$   $name$_swim_reload   ACT_MP_RELOAD_SWIM_$name$ \\ 
+//$MPGestureAttackIKRelease AttackStand_Grenade_$name$ $name$_grenade_throw ACT_MP_ATTACK_STAND_GRENADE_$name$ \\

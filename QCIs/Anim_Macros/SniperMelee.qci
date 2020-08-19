@@ -1,0 +1,8 @@
+//-----------------------------------------------------------------------------------
+// Weapon Attack Melee
+// 	name - unique identifier for the weapon (TF - MELEE)
+//-----------------------------------------------------------------------------------
+$definemacro SniperMelee name \\
+$SniperMeleeGestureAttackIKRelease AttackStand_$name$         $name$_swing         ACT_MP_ATTACK_STAND_$name$ \\
+$MPGestureAttackIKRelease AttackCrouch_$name$        $name$_crouch_swing  ACT_MP_ATTACK_CROUCH_$name$ \\
+//$MPGestureAttackIKRelease AttackStand_Grenade_$name$ $name$_grenade_throw ACT_MP_ATTACK_STAND_GRENADE_$name$ \\

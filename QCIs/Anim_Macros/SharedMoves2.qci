@@ -1,0 +1,81 @@
+//
+// 	SharedMoves macro - defines animations that other movement sequences will be derived from. The typical usage for this is being able to have one run, in l4d's case, 
+//	the rifle. Other weapon's upperbody and hand positions are composited on top of these anims.
+//
+//	Syntax:	$sharedmoves <character> <movement> <weapon> <nw_fps> <nw_loopstart> <nw_lastframe> <sw_fps> <sw_loopstart> <sw_lastframe> <fixloop> <alignAnim>
+//					
+//
+//	
+//declared shared moves except for the North
+$definemacro SharedMoves2 char move weapon \\
+$animation a_$move$N_$weapon$_shared 	$char$_$move$N_$weapon$ 	lx ly loop \\
+$animation a_$move$NW_$weapon$_shared	$char$_$move$NW_$weapon$	lx ly loop \\
+$animation a_$move$NE_$weapon$_shared	$char$_$move$NE_$weapon$	lx ly loop \\
+$animation a_$move$W_$weapon$_shared	$char$_$move$W_$weapon$ 	lx ly loop \\
+$animation a_$move$E_$weapon$_shared	$char$_$move$E_$weapon$		lx ly loop \\
+$animation a_$move$SW_$weapon$_shared	$char$_$move$SW_$weapon$	lx ly loop \\
+$animation a_$move$SE_$weapon$_shared	$char$_$move$SE_$weapon$	lx ly loop \\
+$animation a_$move$S_$weapon$_shared	$char$_$move$S_$weapon$		lx ly loop \\
+$sequence $char$_$move$_$weapon$_shared {     																					\\	
+	a_$move$NW_$weapon$_shared a_$move$N_$weapon$_shared 			a_$move$NE_$weapon$_shared	\\
+	a_$move$W_$weapon$_shared	 $char$_idle_standing_$weapon$	a_$move$E_$weapon$_shared	  \\
+	a_$move$SW_$weapon$_shared a_$move$S_$weapon$_shared	 		a_$move$SE_$weapon$_shared	\\
+	blendwidth 3																																					\\
+	blend move_y 1 -1																																			\\
+	blend move_x 1 -1																																			\\
+}																																												\\			
+
+// include all the animations
+//try this out in the qc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+$definemacro SharedMoves character move weapon NW_fps NW_loopstart NW_lastframe SW_fps SW_loopstart SW_lastframe fixloop alignAnim \\
+$animation a_$move$SE		$character$_$move$SE_$weapon$	 noautoik fps $SW_fps$ startloop $SW_loopstart$ frame 0 $SW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto $alignAnim$  rotateto -135 cmdlist IK_to_BBox \\
+$animation a_$move$E		$character$_$move$E_$weapon$	 noautoik fps $NW_fps$ startloop $NW_loopstart$ frame 0 $NW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto $alignAnim$ rotateto  -90 cmdlist IK_to_BBox \\
+$animation a_$move$NE		$character$_$move$NE_$weapon$	 noautoik fps $NW_fps$ startloop $NW_loopstart$ frame 0 $NW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto $alignAnim$ rotateto  -45 cmdlist IK_to_BBox \\
+$animation a_$move$NW		$character$_$move$NW_$weapon$	 noautoik fps $NW_fps$ startloop $NW_loopstart$ frame 0 $NW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto $alignAnim$ rotateto   45 cmdlist IK_to_BBox \\
+$animation a_$move$W		$character$_$move$W_$weapon$	 noautoik fps $NW_fps$ startloop $NW_loopstart$ frame 0 $NW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto $alignAnim$ rotateto   90 cmdlist IK_to_BBox \\
+$animation a_$move$SW		$character$_$move$SW_$weapon$	 noautoik fps $SW_fps$ startloop $SW_loopstart$ frame 0 $SW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto $alignAnim$ rotateto  135 cmdlist IK_to_BBox \\
+$animation a_$move$S		$character$_$move$S_$weapon$	 noautoik fps $SW_fps$ startloop $SW_loopstart$ frame 0 $SW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto $alignAnim$ rotateto -180 cmdlist IK_to_BBox \\
+*/
+
+
+
+//OLD MACRO
+
+/*
+$definemacro SharedMoves move NW_fps NW_loopstart NW_lastframe SW_fps SW_loopstart SW_lastframe fixloop \\
+$animation a_$move$SE		NamVet_$move$SE_Rifle	 noautoik fps $SW_fps$ startloop $SW_loopstart$ frame 0 $SW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto Idle_Standing_Align  rotateto -135 cmdlist IK_to_BBox \\
+$animation a_$move$E		NamVet_$move$E_Rifle	 noautoik fps $NW_fps$ startloop $NW_loopstart$ frame 0 $NW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto Idle_Standing_Align rotateto  -90 cmdlist IK_to_BBox \\
+$animation a_$move$NE		NamVet_$move$NE_Rifle	 noautoik fps $NW_fps$ startloop $NW_loopstart$ frame 0 $NW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto Idle_Standing_Align rotateto  -45 cmdlist IK_to_BBox \\
+$animation a_$move$NW		NamVet_$move$NW_Rifle	 noautoik fps $NW_fps$ startloop $NW_loopstart$ frame 0 $NW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto Idle_Standing_Align rotateto   45 cmdlist IK_to_BBox \\
+$animation a_$move$W		NamVet_$move$W_Rifle	 noautoik fps $NW_fps$ startloop $NW_loopstart$ frame 0 $NW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto Idle_Standing_Align rotateto   90 cmdlist IK_to_BBox \\
+$animation a_$move$SW		NamVet_$move$SW_Rifle	 noautoik fps $SW_fps$ startloop $SW_loopstart$ frame 0 $SW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto Idle_Standing_Align rotateto  135 cmdlist IK_to_BBox \\
+$animation a_$move$S		NamVet_$move$S_Rifle	 noautoik fps $SW_fps$ startloop $SW_loopstart$ frame 0 $SW_lastframe$ fixuploop -$fixloop$ $fixloop$ LX LY loop alignto Idle_Standing_Align rotateto -180 cmdlist IK_to_BBox \\
+*/

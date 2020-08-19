@@ -1,0 +1,20 @@
+$surfaceprop "flesh"
+$hboxset "L4D"
+
+$hbox 3 "ValveBiped.Bip01_Pelvis"	    -6.00   -4.50   -4.50     6.00    4.50    4.50
+$hbox 6 "ValveBiped.Bip01_L_Thigh"	     5.00   -3.40   -2.85    19.00    2.60    2.15
+$hbox 6 "ValveBiped.Bip01_L_Calf"	     0.50   -1.50   -2.00    19.50    2.50    2.00
+$hbox 6 "ValveBiped.Bip01_L_Toe0"	    -3.50   -0.50   -1.35     1.50    1.50    2.45
+$hbox 7 "ValveBiped.Bip01_R_Thigh"	     5.00   -3.40   -2.85    19.00    2.60    2.15
+$hbox 7 "ValveBiped.Bip01_R_Calf"	     0.50   -1.50   -2.00    19.50    2.50    2.00
+$hbox 7 "ValveBiped.Bip01_R_Toe0"	    -3.50   -0.50   -1.35     1.50    1.50    2.45
+$hbox 3 "ValveBiped.Bip01_Spine1"	    -5.00   -3.00   -5.50     5.00    5.00    5.50
+$hbox 2 "ValveBiped.Bip01_Spine2"	    -2.50   -3.25   -5.75    11.50    5.25    5.75
+$hbox 1 "ValveBiped.Bip01_Neck1"	     0.00   -2.00   -2.00     4.00    2.00    2.00
+$hbox 1 "ValveBiped.Bip01_Head1"	    -0.80   -3.80   -3.05     7.20    4.20    2.45
+$hbox 4 "ValveBiped.Bip01_L_UpperArm"	     0.00   -1.90   -1.80    11.00    1.70    1.80
+$hbox 4 "ValveBiped.Bip01_L_Forearm"	     0.50   -1.50   -1.50    11.50    1.50    1.50
+$hbox 4 "ValveBiped.Bip01_L_Hand"	     1.06   -1.29   -2.15     5.56    0.41    1.05
+$hbox 5 "ValveBiped.Bip01_R_UpperArm"	     0.00   -1.90   -1.80    11.00    1.70    1.80
+$hbox 5 "ValveBiped.Bip01_R_Forearm"	     0.50   -1.50   -1.50    11.50    1.50    1.50
+$hbox 5 "ValveBiped.Bip01_R_Hand"	     1.06   -1.29   -2.15     5.56    0.41    1.05

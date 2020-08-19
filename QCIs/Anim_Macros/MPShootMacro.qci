@@ -1,0 +1,20 @@
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+$definemacro ShootMacro char weapon AnimWeapon start end weight \\
+$sequence Shoot_Standing_$weapon$ $char$_Shoot_$AnimWeapon$_Standing frame $start$ $end$ fixuploop 0 5 subtract Shoot_Standing_$weapon$ 0 iklock lfoot 1 0 iklock rfoot 1 0 delta snap weightlist $weight$ activity ACT_PRIMARYATTACK_$weapon$ -1 \\
+
+
+
+//OLD
+/*
+$definemacro ShootMacro weapon AnimWeapon start end weight \\
+$sequence Shoot_Standing_$weapon$ NamVet_Shoot_$AnimWeapon$_Standing frame $start$ $end$ fixuploop 0 5 subtract Shoot_Standing_$weapon$ 0 iklock lfoot 1 0 iklock rfoot 1 0 delta snap weightlist $weight$ activity ACT_PRIMARYATTACK_$weapon$ -1 \\
+

@@ -1,0 +1,20 @@
+//  
+// 	
+//	Idle Move Macro - on L4D, idles also contained motion that would start based on the walk_x parameter. For L4D2, we knocked that out.
+//  
+//	
+//	
+//  CrouchIdleMacro <sequence> <filename> <frame> <aimmatrix> <fps> <numFrames> <Idlenoise> <fadeout> <fadein> <activity> 
+//	
+// 	TODO: generalize the alignment animation. 
+
+
+$definemacro CrouchIdleMacro sequence filename frame aimmatrix fps numFrames Idlenoise fadeout fadein activity \\
+$sequence $sequence$ $filename$ frame $frame$ $frame$ addlayer $aimmatrix$ fps $fps$ numframes $numFrames$ loop ikrule lhand touch "ValveBiped.Bip01_R_Hand" addlayer $Idlenoise$ fadeout $fadeout$ fadein $fadein$ activity $activity$ -1 cmdlist IK_to_BBox alignto Idle_Standing_Align \\
+
+
+//OLD MACRO
+/*
+$definemacro CrouchIdleMacro sequence filename frame aimmatrix Idlenoise fadeout fadein activity \\
+$sequence $sequence$ $filename$ frame $frame$ $frame$ addlayer $aimmatrix$ fps 40 numframes 242 loop ikrule lhand touch "ValveBiped.Bip01_R_Hand" addlayer $Idlenoise$ fadeout $fadeout$ fadein $fadein$ activity ACT_$activity$ -1 cmdlist IK_to_BBox alignto Idle_Standing_Align \\
+*/

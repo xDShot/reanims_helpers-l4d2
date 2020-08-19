@@ -1,0 +1,35 @@
+//  
+// 	
+//  
+//	AimMacro: creates an aimmatrix sequence from the file you specify. this assumes you start the animation on frame 0. (pointing down-left)
+// Syntax:	$AimMacro namvet_aimmatrix_rifle_standing
+//	
+// 
+//
+// 
+
+	$definemacro GrenAimMacro filename \\
+		$animation	a_pre_$filename$		$filename$ \\
+		$animation	a_pre_$filename$_down_right		$filename$ frame 4 4 subtract a_pre_$filename$ 0 \\
+		$animation	a_pre_$filename$_down_center		$filename$ frame 4 4 subtract a_pre_$filename$ 1 \\
+		$animation	a_pre_$filename$_down_left		$filename$ frame 4 4 subtract a_pre_$filename$ 2 \\
+		$animation	a_pre_$filename$_mid_right		$filename$ frame 4 4 subtract a_pre_$filename$ 3 \\
+		$animation	a_pre_$filename$_mid_center		$filename$ frame 4 4 subtract a_pre_$filename$ 4 \\
+		$animation	a_pre_$filename$_mid_left		$filename$ frame 4 4 subtract a_pre_$filename$ 5 \\
+		$animation	a_pre_$filename$_up_right		$filename$ frame 4 4 subtract a_pre_$filename$ 6 \\
+		$animation	a_pre_$filename$_up_center		$filename$ frame 4 4 subtract a_pre_$filename$ 7 \\
+		$animation	a_pre_$filename$_up_left		$filename$ frame 4 4 subtract a_pre_$filename$ 8 \\
+		$animation	a_pre_$filename$_straight_up		$filename$ frame 4 4 subtract a_pre_$filename$ 9 \\
+		$sequence presubtract_$filename$ { \\
+			a_pre_$filename$_straight_up a_pre_$filename$_straight_up a_pre_$filename$_straight_up \\
+			a_pre_$filename$_up_right a_pre_$filename$_up_center a_pre_$filename$_up_left \\
+			a_pre_$filename$_mid_right a_pre_$filename$_mid_center a_pre_$filename$_mid_left \\
+			a_pre_$filename$_down_right a_pre_$filename$_down_center a_pre_$filename$_down_left \\
+			weightlist ALLUPPERBODY \\
+			blendref a_pre_$filename$_mid_center \\
+			blendcenter a_pre_$filename$_mid_center \\
+			blendwidth 3 blend body_yaw -90 90 blend body_pitch -90 45 \\
+			delta \\
+			iklock rfoot 1 0 iklock lfoot 1 0 \\
+			hidden \\
+			} \\

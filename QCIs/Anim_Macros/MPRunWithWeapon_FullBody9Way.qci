@@ -1,0 +1,45 @@
+//================================================================================================
+//
+// Macro: MPRunWithWeapon_FullBody9Way
+//
+// Disc: Makes a 9-way run sequence, taking the full body animation for each direction.   requires 9 animations
+//	 of type $name$ (PRIMARY, SECONDARY, etc)
+//
+// NOTE: Assumes the files of the "movename" exist.  For example, if movename = Run, then RunN, RunNE, RunE, etc.
+//       are the .smd filenames for the 9-way movement.
+//
+// Usage: MPRunWithWeapon_FullBody9Way name fS fSE fE fNE fN fNW fW fSW filename aimmatrix activityname
+//	- name: unique id
+//	- fS, fSE, fE, fNE, fN, fNW, fW, fSW: startloop frame numbers for S, SE, etc.
+//	- aimmatrix: the name of the aimmatrix for the movement type
+//	- activity: the name of the movement activity
+//
+// Example: MPRunWithWeapon_FullBody9Way PRIMARY 0 0 0 0 0 0 0 0 primary_aim_run ACT_MP_RUN_PRIMARY
+//
+$definemacro MPRunWithWeapon_FullBody9Way name fS fSE fE fNE fN fNW fW fSW aimmatrix activityname infoNode \\
+$animation a_blend_runN_$name$ $name$_runN blockname $infoNode$ lx ly \\
+$animation a_blend_runNE_$name$ $name$_runNE blockname $infoNode$ lx ly \\
+$animation a_blend_runE_$name$ $name$_runE blockname $infoNode$ lx ly \\
+$animation a_blend_runNW_$name$ $name$_runNW blockname $infoNode$ lx ly \\
+$animation a_blend_runW_$name$ $name$_runW blockname $infoNode$ lx ly \\
+$animation a_blend_runS_$name$ $name$_runS blockname $infoNode$ lx ly \\
+$animation a_blend_runSW_$name$ $name$_runSW blockname $infoNode$ lx ly \\
+$animation a_blend_runSE_$name$ $name$_runSE blockname $infoNode$ lx ly \\
+$animation a_runCenter_$name$  $name$_runCenter blockname $infoNode$ loop noautoik alignto a_reference ikrule lhand touch "bip_hand_R" \\
+$MakeLoopMoveIK runS_$name$  $name$_runs    $fS$  -180 a_reference  a_blend_runS_$name$ $infoNode$ \\
+$MakeLoopMoveIK runSE_$name$ $name$_runse   $fSE$ -135 a_reference  a_blend_runSE_$name$ $infoNode$ \\
+$MakeLoopMoveIK runE_$name$  $name$_rune    $fE$   -90 a_reference  a_blend_runE_$name$ $infoNode$ \\ 
+$MakeLoopMoveIK runNE_$name$ $name$_runne   $fNE$  -45 a_reference  a_blend_runNE_$name$ $infoNode$ \\
+$MakeLoopMoveIK runN_$name$  $name$_runn    $fN$     0 a_reference  a_blend_runN_$name$ $infoNode$ \\
+$MakeLoopMoveIK runNW_$name$ $name$_runnw   $fNW$   45 a_reference  a_blend_runNW_$name$ $infoNode$ \\
+$MakeLoopMoveIK runW_$name$  $name$_runw    $fW$    90 a_reference  a_blend_runW_$name$ $infoNode$ \\
+$MakeLoopMoveIK runSW_$name$ $name$_runsw   $fSW$  135 a_reference  a_blend_runSW_$name$ $infoNode$ \\
+$sequence Run_$name$ { \\
+	a_runsw_$name$	a_runS_$name$		a_runSE_$name$ \\
+	a_runW_$name$	a_runCenter_$name$	a_runE_$name$ \\
+	a_runNW_$name$	a_runN_$name$		a_runNE_$name$ \\
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1 \\
+	addlayer $aimmatrix$ \\
+	activity $activityname$ 1 \\
+	noautoik \\
+}

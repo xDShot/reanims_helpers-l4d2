@@ -1,0 +1,9 @@
+//
+$include "../reanims_helpers/QCIs/survivor_shared_bones.qci"
+$include "../reanims_helpers/QCIs/survivor_male_hitbox.qci"
+$include "../reanims_helpers/QCIs/survivor_male_ruleshierarchy.qci"
+$definevariable _CHARACTER_SCALE "1"
+$scale 1
+$include "../reanims_helpers/QCIs/helper_shared.qci"
+
+$definevariable _CHARACTER_NAME "louis"

@@ -1,0 +1,12 @@
+//-----------------------------------------------------------------------------------
+// Weapon Attack Firing
+// 	name - unique identifier for the weapon (TF - PRIMARY, SECONDARY etc.)
+//-----------------------------------------------------------------------------------
+$definemacro MPWeaponFiringLoop name \\
+$MPGestureAttackLoop AttackStand_$name$  $name$_fire_loop          ACT_MP_ATTACK_STAND_$name$ \\
+$MPGestureAttackLoop AttackCrouch_$name$ $name$_crouch_fire   ACT_MP_ATTACK_CROUCH_$name$ \\
+$MPGestureAttackLoop AttackSwim_$name$   $name$_swim_fire     ACT_MP_ATTACK_SWIM_$name$ \\   
+$MPGestureReload ReloadStand_$name$  $name$_reload        ACT_MP_RELOAD_STAND_$name$ \\
+$MPGestureReload ReloadCrouch_$name$ $name$_crouch_reload ACT_MP_RELOAD_CROUCH_$name$ \\ 
+$MPGestureReload ReloadSwim_$name$   $name$_swim_reload   ACT_MP_RELOAD_SWIM_$name$ \\ 
+//$MPGestureAttackIKRelease AttackStand_Grenade_$name$ $name$_grenade_throw ACT_MP_ATTACK_STAND_GRENADE_$name$ \\

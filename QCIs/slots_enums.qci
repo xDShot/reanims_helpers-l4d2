@@ -1,0 +1,45 @@
+// Idle Noise breathing layers
+$definevariable SLOT_noise 001
+// All animations related to these weapons, replacing in-general ones
+$definevariable SLOT_Pistol 002
+$definevariable SLOT_Elites 003
+$definevariable SLOT_Rifles 004
+$definevariable SLOT_Shotgun 005
+$definevariable SLOT_PumpShotgun 006
+$definevariable SLOT_Grenade 007
+$definevariable SLOT_FirstAidKit 008
+$definevariable SLOT_SMG 009
+$definevariable SLOT_HuntingRifle 010
+$definevariable SLOT_SniperMilitary 011
+$definevariable SLOT_idle_FyringPan 012
+$definevariable SLOT_idle_Bat 013
+$definevariable SLOT_idle_Axe 014
+$definevariable SLOT_idle_guitar 015
+$definevariable SLOT_Chainsaw 016
+// Animations in general for all weapons variations being hold
+$definevariable SLOT_idle_standing 017
+$definevariable SLOT_idle_crouching 018
+$definevariable SLOT_idle_calm 019
+$definevariable SLOT_idle_Injured 020
+$definevariable SLOT_walk 021
+$definevariable SLOT_CrouchWalk 022
+$definevariable SLOT_Run 023
+$definevariable SLOT_CalmWalk 024
+$definevariable SLOT_Run 025
+$definevariable SLOT_LimpWalk 026
+$definevariable SLOT_LimpRun 027
+$definevariable SLOT_Shoot_GrenThrow 028
+$definevariable SLOT_Melee_Sweep_Shove_Straight_stomp 029
+$definevariable SLOT_Reload 030
+// When being locked down in room until respawn rescue; being revived
+$definevariable SLOT_Rescue 031
+$definevariable SLOT_Heal_self 032
+$definevariable SLOT_Heal_Other 033
+$definevariable SLOT_Jump_Fall_landing 034
+$definevariable SLOT_Ladder 035
+$definevariable SLOT_Incap 036
+$definevariable SLOT_Flinch 037
+$definevariable SLOT_Shoved 038
+$definevariable SLOT_gestures 039
+// 040-047 for everything else
+$definevariable SLOT_animfixes 048

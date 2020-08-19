@@ -1,0 +1,18 @@
+//
+// 	Unique Lower Body Movement
+//
+//	Syntax:	$uniqueLower <character> <move> <weapon> <fps> <loopstart> <lastframe> <fixloop> <rotate> 
+//					
+//	TODO: Add an "alignAnim" variable. For some reason, it donesn't like the extra variable. I've tried implementing it just like in MPSharedMoves.qci
+//	
+
+$definemacro UniqueLower character move weapon fps loopstart lastframe fixloop rotate //alignAnim  \\
+$animation a_$move$_$weapon$	$character$_$move$_$weapon$ noautoik fps $fps$  startloop $loopstart$  frame 0 $lastframe$  fixuploop -$fixloop$ $fixloop$ LX LY loop rotateto $rotate$ cmdlist IK_to_BBox alignto Idle_Standing_Align \\
+
+
+
+//OLD MACRO
+/*
+$definemacro UniqueLower move weapon fps loopstart lastframe fixloop rotate \\
+$animation a_$move$_$weapon$	NamVet_$move$_$weapon$ noautoik fps $fps$  startloop $loopstart$  frame 0 $lastframe$  fixuploop -$fixloop$ $fixloop$ LX LY loop alignto Idle_Standing_Align rotateto $rotate$ cmdlist IK_to_BBox \\
+*/

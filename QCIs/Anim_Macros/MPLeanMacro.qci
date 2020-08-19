@@ -1,0 +1,23 @@
+		$definemacro LeanMacro filename \\
+		$animation	a_$filename$_neutral		$filename$ frame 4 4 \\
+		$animation	a_$filename$_down_right		$filename$ frame 0 0 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_down_center	$filename$ frame 1 1 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_down_left		$filename$ frame 2 2 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_mid_right		$filename$ frame 3 3 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_mid_center		$filename$ frame 4 4 noanimation \\
+		$animation	a_$filename$_mid_left		$filename$ frame 5 5 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_up_right		$filename$ frame 6 6 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_up_center		$filename$ frame 7 7 subtract a_$filename$_neutral 0 \\
+		$animation	a_$filename$_up_left		$filename$ frame 8 8 subtract a_$filename$_neutral 0 \\
+		$sequence $filename$ { \\
+			a_$filename$_up_right a_$filename$_up_center a_$filename$_up_left \\
+			a_$filename$_mid_right a_$filename$_mid_center a_$filename$_mid_left \\
+			a_$filename$_down_right a_$filename$_down_center a_$filename$_down_left \\
+			weightlist ALLUPPERBODY \\
+			blendref a_$filename$_neutral \\
+			blendcenter a_$filename$_mid_center \\
+			blendwidth 3 blend move_y .7 -.7 blend move_x -1 1 \\
+			delta \\
+			iklock rfoot 1 0 iklock lfoot 1 0 \\
+			hidden \\
+			} \\

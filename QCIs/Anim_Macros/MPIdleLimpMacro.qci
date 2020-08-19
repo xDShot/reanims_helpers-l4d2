@@ -1,0 +1,44 @@
+//  
+// 	
+//	matt:this doesn't look any different than the idle move macro  
+//	
+//	
+//	IdleLimpMacro sequence ZeroMove frame aimlayer Idlenoise fadein fadeout activity \\
+//	
+// 	TODO: generalize the alignment animation. 
+
+
+$definemacro IdleLimpMacro sequence ZeroMove frame aimlayer Idlenoise fadein fadeout activity \\
+$animation a_$ZeroMove$		$ZeroMove$	noautoik fps 40 frame $frame$ $frame$ numframes 242 loop cmdlist IK_to_BBox \\
+$sequence $ZeroMove$_layer	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop x y z iklock lfoot 1 0 iklock rfoot 1 0 weightlist PELVIS100ARMS0 worldspace hidden \\
+$sequence $ZeroMove$_arms	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop ikrule lhand touch "ValveBiped.Bip01_R_Hand" weightlist CLAVICLES_ONLY hidden \\
+$sequence $sequence$ { \\
+			a_$ZeroMove$ \\
+			loop \\
+			blendlayer $ZeroMove$_layer 0 0 0 0 local \\ 
+			addlayer $ZeroMove$_arms \\
+			addlayer $aimlayer$ addlayer $Idlenoise$ \\ 
+			fadein $fadein$ fadeout $fadeout$ \\
+			activity $activity$ -1 \\ 
+} \\
+
+
+
+			
+//old macro
+/*
+
+$definemacro IdleLimpMacro sequence ZeroMove frame aimlayer Idlenoise fadein fadeout activity \\
+		$animation a_$ZeroMove$		$ZeroMove$	noautoik fps 40 frame $frame$ $frame$ numframes 242 loop cmdlist IK_to_BBox \\
+		$sequence $ZeroMove$_layer	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop x y z iklock lfoot 1 0 iklock rfoot 1 0 weightlist PELVIS100ARMS0 worldspace hidden \\
+		$sequence $ZeroMove$_arms	$ZeroMove$	fps 40 frame $frame$ $frame$ numframes 242 loop ikrule lhand touch "ValveBiped.Bip01_R_Hand" weightlist CLAVICLES_ONLY hidden \\
+		$sequence $sequence$ { \\
+			a_$ZeroMove$ \\
+			loop \\
+			blendlayer $ZeroMove$_layer 0 0 0 0 local \\ 
+			addlayer $ZeroMove$_arms \\
+			addlayer $aimlayer$ addlayer $Idlenoise$ \\ 
+			fadein $fadein$ fadeout $fadeout$ \\
+			activity ACT_$activity$ -1 \\ 
+			} \\
+*/

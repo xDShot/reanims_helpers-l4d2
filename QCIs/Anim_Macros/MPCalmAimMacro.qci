@@ -1,0 +1,28 @@
+//  
+// 	
+//  USE AIMMACRO INSTEAD!!!!
+//
+//
+//
+//	AimMacro: creates an aimmatrix sequence from the file you specify. this assumes you start the animation on frame 0. (pointing down-left)
+// Syntax:	$AimMacro namvet_aimmatrix_rifle_standing
+//	
+// This macro is different because it comments out the weightlist in line 28 and the ik rules on line 33
+//
+// 
+
+		$definemacro CalmAimMacro sequence filename \\
+		$sequence $sequence$ { \\
+			a_$filename$_straight_up a_$filename$_straight_up a_$filename$_straight_up \\
+			a_$filename$_up_right a_$filename$_up_center a_$filename$_up_left \\
+			a_$filename$_mid_right a_$filename$_mid_center a_$filename$_mid_left \\
+			a_$filename$_down_right a_$filename$_down_center a_$filename$_down_left \\
+			weightlist ALLUPPERBODY \\
+			blendref a_$filename$_neutral \\
+			blendcenter a_$filename$_mid_center \\
+			blendwidth 3 blend head_yaw -90 90 blend head_pitch -90 45 \\
+			delta \\
+			iklock rfoot 1 0 iklock lfoot 1 0 \\
+			hidden \\
+			autoplay \\
+		}

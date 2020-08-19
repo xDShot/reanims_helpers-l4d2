@@ -1,0 +1,112 @@
+/*
+//Draw/Prime Conc grenade
+$animation a_grenade2_neutral_PRIMARY "primary_grenade_conc_drawPrimeThrow.dmx" frames 0 0
+$sequence armslayer_draw_grenade2_PRIMARY "primary_grenade_conc_drawPrimeThrow.dmx" frames 0 105 {
+ weightlist Armsblend 
+ hidden
+}
+$sequence bodylayer_draw_grenade2_PRIMARY "primary_grenade_conc_drawPrimeThrow.dmx" frames 0 105 subtract a_grenade2_neutral_PRIMARY 0 {
+ weightlist HipsTorso
+ ikrule lhand release 
+ delta
+ hidden
+}
+ 
+$sequence draw_grenade2_PRIMARY "primary_grenade_conc_drawPrimeThrow.dmx" noanimation numframes 105 {
+ addlayer bodylayer_draw_grenade2_PRIMARY
+ addlayer armslayer_draw_grenade2_PRIMARY 
+ activity ACT_MP_PRIMARY_GRENADE2_DRAW 1 
+}
+ 
+//Throw Conc grenade
+$animation a_grenade2_throw_neutral "primary_grenade_conc_drawPrimeThrow.dmx" frames 105 105
+$sequence bodylayer_throw_grenade2_PRIMARY "primary_grenade_conc_drawPrimeThrow.dmx" frames 105 130 subtract a_grenade2_throw_neutral 0 {
+ weightlist HipsTorso
+ ikrule lhand release
+ hidden
+ delta
+}
+$sequence armslayer_throw_grenade2_PRIMARY "primary_grenade_conc_drawPrimeThrow.dmx" frames 105 130 {
+ weightlist Armsblend 
+ hidden
+}
+ 
+$sequence throw_grenade2_PRIMARY "primary_grenade_conc_drawPrimeThrow.dmx" noanimation numframes 25 {
+ addlayer bodylayer_throw_grenade2_PRIMARY
+ addlayer armslayer_throw_grenade2_PRIMARY 
+ activity ACT_MP_PRIMARY_GRENADE2_ATTACK 1 
+}
+*/
+
+//-------------------------------------------------------------------------
+// TF Grenades
+//	Sets up the primary and secondary grenade animations in conjunction with the varios weapons
+// 	name - the weapon identifier (ie. PRIMARY, etc)
+//-------------------------------------------------------------------------
+$definemacro DemomanGrenades name \\
+$animation a_grenade1_draw_neutral_$name$ $name$_grenade1_draw.dmx frames 0 0 \\
+$sequence armslayer_draw_grenade1_$name$ $name$_grenade1_draw.dmx { \\
+ weightlist DemoGrenadeRightArmBlend  \\
+ hidden \\
+} \\
+$sequence bodylayer_draw_grenade1_$name$ $name$_grenade1_draw.dmx subtract a_grenade1_draw_neutral_$name$ 0 { \\
+ weightlist DemoGrenadeHipsTorso \\
+ delta \\
+ hidden \\
+} \\
+$sequence draw_grenade1_$name$ $name$_grenade1_draw.dmx noanimation numframes 90 { \\
+ addlayer bodylayer_draw_grenade1_$name$ \\
+ addlayer armslayer_draw_grenade1_$name$ \\
+ iklock rfoot 1 0 iklock lfoot 1 0 \\
+ ikrule lhand release \\
+ activity ACT_MP_$name$_GRENADE1_DRAW 1 \\
+} \\
+$sequence bodylayer_throw_grenade1_$name$ $name$_grenade1_throw.dmx subtract a_grenade1_draw_neutral_$name$ 0 { \\
+ weightlist DemoGrenadeHipsTorso \\
+ hidden \\
+ delta \\
+} \\
+$sequence armslayer_throw_grenade1_$name$ $name$_grenade1_throw.dmx { \\
+ weightlist DemoGrenadeRightArmBlend \\
+ hidden \\
+} \\
+$sequence throw_grenade1_$name$ $name$_grenade1_throw.dmx noanimation numframes 30 { \\
+ addlayer bodylayer_throw_grenade1_$name$ \\
+ addlayer armslayer_throw_grenade1_$name$ \\
+ iklock rfoot 1 0 iklock lfoot 1 0 \\
+ ikrule lhand release range 0 0 20 29 \\
+ activity ACT_MP_$name$_GRENADE1_ATTACK 1 \\
+} \\
+$animation a_grenade2_draw_neutral_$name$ $name$_grenade2_draw.dmx frames 0 0 \\
+$sequence armslayer_draw_grenade2_$name$ $name$_grenade2_draw.dmx { \\
+ weightlist DemoGrenade2RightArmBlend \\
+ hidden \\
+} \\
+$sequence bodylayer_draw_grenade2_$name$ $name$_grenade2_draw.dmx subtract a_grenade2_draw_neutral_$name$ 0 { \\
+ weightlist HipsTorso \\
+ delta \\
+ hidden \\
+} \\
+$sequence draw_grenade2_$name$ $name$_grenade2_draw.dmx noanimation numframes 90 { \\
+ addlayer bodylayer_draw_grenade2_$name$ \\
+ addlayer armslayer_draw_grenade2_$name$ \\
+ iklock rfoot 1 0 iklock lfoot 1 0 \\
+  ikrule lhand release \\
+ activity ACT_MP_$name$_GRENADE2_DRAW 1 \\
+} \\
+$sequence bodylayer_throw_grenade2_$name$ $name$_grenade2_throw.dmx subtract a_grenade2_draw_neutral_$name$ 0 { \\
+ weightlist HipsTorso \\
+ hidden \\
+ delta \\
+} \\
+$sequence armslayer_throw_grenade2_$name$ $name$_grenade2_throw.dmx { \\
+ weightlist DemoGrenade2RightArmBlend \\
+ hidden \\
+} \\
+$sequence throw_grenade2_$name$ $name$_grenade2_throw.dmx noanimation numframes 30 { \\
+ addlayer bodylayer_throw_grenade2_$name$ \\
+ addlayer armslayer_throw_grenade2_$name$ \\
+ iklock rfoot 1 0 iklock lfoot 1 0 \\
+ ikrule lhand release range 0 0 20 29 \\
+ activity ACT_MP_$name$_GRENADE2_ATTACK 1 \\
+} \\

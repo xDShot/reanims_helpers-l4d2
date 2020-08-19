@@ -1,0 +1,73 @@
+//  
+// 	
+//  
+//	
+//	
+//  MoveMacro <character> <sequence> <move> <weapon> <N_fps> <N_loopstart> <N_lastframe> <fixloop> <shared> <ZeroMove> <Z_firstframe> <Z_lastframe> <Z_numframes> <aimlayer> <activity> <Rfoot> <Lfoot> <Rfoot2> <Lfoot2> <fadein> <fadeout> <CalmAim> \\
+//	
+// 	TODO: generalize the alignment animation. 
+//
+//
+
+		$definemacro MoveNoIKMacro char sequence move weapon N_fps N_loopstart N_lastframe fixloop shared ZeroMove Z_firstframe Z_lastframe Z_numframes aimlayer activity Rfoot Lfoot Rfoot2 Lfoot2 fadein fadeout \\CalmAim \\
+		$animation a_$sequence$Zero_$weapon$	$ZeroMove$	noautoik frame $Z_firstframe$ $Z_lastframe$ numframes $Z_numframes$ loop alignto Idle_Standing_Align cmdlist IK_to_BBox \\
+		$sequence $sequence$N_$weapon$_layer	$char$_$sequence$N_$weapon$		fps $N_fps$  startloop $N_loopstart$  frame 0 $N_lastframe$  fixuploop -$fixloop$ $fixloop$	x y z loop iklock lfoot 1 0 iklock rfoot 1 0 weightlist PELVIS100ARMS0 worldspace hidden \\
+		$sequence $sequence$N_$weapon$_arms		$char$_$sequence$N_$weapon$		fps $N_fps$  startloop $N_loopstart$  frame 0 $N_lastframe$  fixuploop -$fixloop$ $fixloop$	x y z loop weightlist CLAVICLES_ONLY ikrule lhand release hidden \\
+		$sequence $sequence$_$weapon$ { \\
+			a_$move$NW a_$move$N_$shared$ a_$move$NE \\ 
+			a_$move$W  a_$sequence$Zero_$weapon$ a_$move$E \\ 
+			a_$move$SW a_$move$S a_$move$SE \\ 
+			blendwidth 3 blend move_y -1 1 blend move_x 1 -1 loop \\
+			blendlayer $sequence$N_$weapon$_layer 0 0 0 0 local \\
+			addlayer $sequence$N_$weapon$_arms \\ 
+			addlayer $aimlayer$ \\ 
+			fadein $fadein$ fadeout $fadeout$ \\
+			activity $activity$ -1 \\ 
+			{ event AE_FOOTSTEP_RIGHT $Rfoot$ } \\
+			{ event AE_FOOTSTEP_LEFT $Lfoot$ } \\
+			{ event AE_FOOTSTEP_RIGHT $Rfoot2$ } \\
+			{ event AE_FOOTSTEP_LEFT $Lfoot2$ } \\ 
+			} \\
+			
+			$definemacro MoveNoIKMacroNoBlend char sequence move weapon N_fps N_loopstart N_lastframe fixloop shared ZeroMove Z_firstframe Z_lastframe Z_numframes aimlayer activity Rfoot Lfoot Rfoot2 Lfoot2 fadein fadeout \\CalmAim \\
+		$animation a_$sequence$Zero_$weapon$	$ZeroMove$	noautoik frame $Z_firstframe$ $Z_lastframe$ numframes $Z_numframes$ loop alignto Idle_Standing_Align cmdlist IK_to_BBox \\
+		$sequence $sequence$N_$weapon$_layer	$char$_$sequence$N_$weapon$		fps $N_fps$  startloop $N_loopstart$  frame 0 $N_lastframe$  fixuploop -$fixloop$ $fixloop$	x y z loop iklock lfoot 1 0 iklock rfoot 1 0 weightlist PELVIS100ARMS0 worldspace hidden \\
+		$sequence $sequence$N_$weapon$_arms		$char$_$sequence$N_$weapon$		fps $N_fps$  startloop $N_loopstart$  frame 0 $N_lastframe$  fixuploop -$fixloop$ $fixloop$	x y z loop weightlist CLAVICLES_ONLY ikrule lhand release hidden \\
+		$sequence $sequence$_$weapon$ { \\
+			a_$move$NW a_$move$N_$shared$ a_$move$NE \\ 
+			a_$move$W  a_$sequence$Zero_$weapon$ a_$move$E \\ 
+			a_$move$SW a_$move$S a_$move$SE \\ 
+			blendwidth 3 blend move_y -1 1 blend move_x 1 -1 loop \\
+			//blendlayer $sequence$N_$weapon$_layer 0 0 0 0 local \\
+			addlayer $sequence$N_$weapon$_arms \\ 
+			addlayer $aimlayer$ \\ 
+			fadein $fadein$ fadeout $fadeout$ \\
+			activity $activity$ -1 \\ 
+			{ event AE_FOOTSTEP_RIGHT $Rfoot$ } \\
+			{ event AE_FOOTSTEP_LEFT $Lfoot$ } \\
+			{ event AE_FOOTSTEP_RIGHT $Rfoot2$ } \\
+			{ event AE_FOOTSTEP_LEFT $Lfoot2$ } \\ 
+			} \\
+
+//OLD MACRO
+/*
+		$definemacro MoveNoIKMacro sequence move weapon N_fps N_loopstart N_lastframe fixloop shared ZeroMove Z_firstframe Z_lastframe Z_numframes aimlayer activity Rfoot Lfoot Rfoot2 Lfoot2 fadein fadeout CalmAim \\
+		$animation a_$sequence$Zero_$weapon$	$ZeroMove$	noautoik frame $Z_firstframe$ $Z_lastframe$ numframes $Z_numframes$ loop alignto Idle_Standing_Align cmdlist IK_to_BBox \\
+		$sequence $sequence$N_$weapon$_layer	NamVet_$sequence$N_$weapon$		fps $N_fps$  startloop $N_loopstart$  frame 0 $N_lastframe$  fixuploop -$fixloop$ $fixloop$	x y z loop iklock lfoot 1 0 iklock rfoot 1 0 weightlist PELVIS100ARMS0 worldspace hidden \\
+		$sequence $sequence$N_$weapon$_arms		NamVet_$sequence$N_$weapon$		fps $N_fps$  startloop $N_loopstart$  frame 0 $N_lastframe$  fixuploop -$fixloop$ $fixloop$	x y z loop weightlist CLAVICLES_ONLY ikrule lhand release hidden \\
+		$sequence $sequence$_$weapon$ { \\
+			a_$move$NW a_$move$N_$shared$ a_$move$NE \\ 
+			a_$move$W  a_$sequence$Zero_$weapon$ a_$move$E \\ 
+			a_$move$SW a_$move$S a_$move$SE \\ 
+			blendwidth 3 blend move_y -1 1 blend move_x 1 -1 loop \\
+			blendlayer $sequence$N_$weapon$_layer 0 0 0 0 local \\
+			addlayer $sequence$N_$weapon$_arms \\ 
+			addlayer $aimlayer$ \\ 
+			fadein $fadein$ fadeout $fadeout$ \\
+			activity ACT_$activity$ -1 \\ 
+			{ event AE_FOOTSTEP_RIGHT $Rfoot$ } \\
+			{ event AE_FOOTSTEP_LEFT $Lfoot$ } \\
+			{ event AE_FOOTSTEP_RIGHT $Rfoot2$ } \\
+			{ event AE_FOOTSTEP_LEFT $Lfoot2$ } \\ 
+			} \\
+*/

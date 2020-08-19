@@ -1,0 +1,46 @@
+//================================================================================================
+//
+// Macro: MPDeployedMovement_FullBody9Way
+//
+// Disc: Makes a 9-way movement sequence, taking the full body animation for each direction.   requires 9 animations
+//	 of type $name$ (PRIMARY, SECONDARY, etc)
+//
+// NOTE: Assumes the files of the "movename" exist.  For example, if movename = Run, then RunN, RunNE, RunE, etc.
+//       are the .smd filenames for the 9-way movement.
+//
+// Usage: MPDeployedMovement_FullBody9Way name fS fSE fE fNE fN fNW fW fSW filename aimmatrix activityname
+//	- name: unique id
+//	- fS, fSE, fE, fNE, fN, fNW, fW, fSW: startloop frame numbers for S, SE, etc.
+//	- aimmatrix: the name of the aimmatrix for the movement type
+//	- activity: the name of the movement activity
+//
+// Example: MPDeployedMovement_FullBody9Way PRIMARY 0 0 0 0 0 0 0 0 primary_aim_run ACT_MP_RUN_PRIMARY
+//
+$definemacro MPDeployedMovement_FullBody9Way name fS fSE fE fNE fN fNW fW fSW aimmatrix activityname infoNode \\
+$sequence Stand_Deployed_$name$  $name$_idle_deployed loop alignto a_reference addlayer $aimmatrix$ activity ACT_MP_DEPLOYED_IDLE 1 \\
+$animation a_blend_DeployedN_$name$ $name$_DeployedN blockname $infoNode$ lx ly \\
+$animation a_blend_DeployedNE_$name$ $name$_DeployedNE blockname $infoNode$ lx ly \\
+$animation a_blend_DeployedE_$name$ $name$_DeployedE blockname $infoNode$ lx ly \\
+$animation a_blend_DeployedNW_$name$ $name$_DeployedNW blockname $infoNode$ lx ly \\
+$animation a_blend_DeployedW_$name$ $name$_DeployedW blockname $infoNode$ lx ly \\
+$animation a_blend_DeployedS_$name$ $name$_DeployedS blockname $infoNode$ lx ly \\
+$animation a_blend_DeployedSW_$name$ $name$_DeployedSW blockname $infoNode$ lx ly \\
+$animation a_blend_DeployedSE_$name$ $name$_DeployedSE blockname $infoNode$ lx ly \\
+$animation a_DeployedCenter_$name$  $name$_DeployedCenter blockname $infoNode$ loop noautoik alignto a_reference ikrule lhand touch "bip_hand_R" \\
+$MakeLoopMoveIK DeployedS_$name$  $name$_Deployeds    $fS$  -180 a_reference  a_blend_DeployedS_$name$ $infoNode$ \\
+$MakeLoopMoveIK DeployedSE_$name$ $name$_Deployedse   $fSE$ -135 a_reference  a_blend_DeployedSE_$name$ $infoNode$ \\
+$MakeLoopMoveIK DeployedE_$name$  $name$_Deployede    $fE$   -90 a_reference  a_blend_DeployedE_$name$ $infoNode$ \\ 
+$MakeLoopMoveIK DeployedNE_$name$ $name$_Deployedne   $fNE$  -45 a_reference  a_blend_DeployedNE_$name$ $infoNode$ \\
+$MakeLoopMoveIK DeployedN_$name$  $name$_Deployedn    $fN$     0 a_reference  a_blend_DeployedN_$name$ $infoNode$ \\
+$MakeLoopMoveIK DeployedNW_$name$ $name$_Deployednw   $fNW$   45 a_reference  a_blend_DeployedNW_$name$ $infoNode$ \\
+$MakeLoopMoveIK DeployedW_$name$  $name$_Deployedw    $fW$    90 a_reference  a_blend_DeployedW_$name$ $infoNode$ \\
+$MakeLoopMoveIK DeployedSW_$name$ $name$_Deployedsw   $fSW$  135 a_reference  a_blend_DeployedSW_$name$ $infoNode$ \\
+$sequence $name$_Deployed_Movement { \\
+	a_Deployedsw_$name$	a_DeployedS_$name$		a_DeployedSE_$name$ \\
+	a_DeployedW_$name$	a_DeployedCenter_$name$		a_DeployedE_$name$ \\
+	a_DeployedNW_$name$	a_DeployedN_$name$		a_DeployedNE_$name$ \\
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1 \\
+	addlayer $aimmatrix$ \\
+	activity $activityname$ 1 \\
+	noautoik \\
+}

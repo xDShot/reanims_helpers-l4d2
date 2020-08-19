@@ -1,0 +1,13 @@
+	$definemacro IdleGrenLimpNoIKMacro sequence ZeroMove frame aimlayer Idlenoise fadein fadeout activity \\
+		$sequence $sequence$ { \\
+			a_walkNW a_limpwalkN_rifle a_walkNE \\ 
+			a_walkW  a_$ZeroMove$ a_walkE \\ 
+			a_walkSW a_limpwalkS_rifle a_walkSE \\ 
+			blendwidth 3 blend move_y -1 1 blend move_x 1 -1 loop \\
+			blendlayer $ZeroMove$_layer 0 0 0 0 local \\ 
+			addlayer $ZeroMove$_arms \\
+			addlayer $aimlayer$ addlayer $Idlenoise$ \\
+			addlayer Gren_Pull_Back_layer \\ 
+			fadein $fadein$ fadeout $fadeout$ \\
+			activity $activity$ -1 \\ 
+			} \\
