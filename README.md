@@ -1,0 +1,1 @@
+Must be cloned into _reanims\_helpers_ folder near another reanimating mod folder. Include one of character's qci file to acquire bones list, slots constants and apply imported scales. Weightlists and macros are not included and must be imported if willing to use them.
