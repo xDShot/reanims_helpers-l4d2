@@ -1,0 +1,19 @@
+//Written and developed by Salad & Lt. Rocky
+
+$definebone "ValveBiped.weapon_bone_Clip2" "ValveBiped.Bip01_L_Hand" 3.028210 -0.923409 -2.009452 -0.743369 90.942358 90.188244 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+$definebone "ValveBiped.weapon_bone_Clip2_Bullets" "ValveBiped.weapon_bone_Clip2" 0.116954 4.311607 0.061861 -0.000027 0.000009 0.000593 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+$definebone "ValveBiped.weapon_bolt_l" "ValveBiped.Bip01_L_Hand" 0.000000 -0.000001 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 -0.000000 -0.000000 -0.000000 0.000000
+$definebone "ValveBiped.weapon_bone_Clip_Bullets" "ValveBiped.weapon_bone_Clip" 0.000000 1.000000 0.000009 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "ValveBiped.weapon_bolt" "ValveBiped.weapon_bone" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "ValveBiped.weapon_bolt_opposite" "ValveBiped.weapon_bone" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "ValveBiped.weapon_charger" "ValveBiped.weapon_bone" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+
+$definebone "ValveBiped.weapon_bone_extra" "ValveBiped.weapon_bone" 0.018897 0.665159 9.395883 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+
+$bonemerge "ValveBiped.weapon_bone_Clip2"
+$bonemerge "ValveBiped.weapon_bone_Clip2_Bullets"
+$bonemerge "ValveBiped.weapon_bolt_l"
+$bonemerge "ValveBiped.weapon_bone_Clip_Bullets"
+$bonemerge "ValveBiped.weapon_bolt"
+$bonemerge "ValveBiped.weapon_bolt_opposite"
+$bonemerge "ValveBiped.weapon_charger"
