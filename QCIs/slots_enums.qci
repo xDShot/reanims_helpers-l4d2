@@ -41,5 +41,9 @@ $definevariable SLOT_Incap 036
 $definevariable SLOT_Flinch 037
 $definevariable SLOT_Shoved 038
 $definevariable SLOT_gestures 039
-// 040-047 for everything else
+$definevariable SLOT_Pounced 040
+$definevariable SLOT_Smoked 041
+$definevariable SLOT_Crushed 042
+$definevariable SLOT_Ridden 043
+// 044-047 for everything else
 $definevariable SLOT_animfixes 048
