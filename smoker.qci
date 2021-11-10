@@ -1,0 +1,8 @@
+//
+$include "../reanims_helpers/QCIs/smoker_bones.qci"
+$include "../reanims_helpers/QCIs/smoker_ruleshierarchy.qci"
+$definevariable _CHARACTER_SCALE "1.175"
+$scale 1.175
+$include "../reanims_helpers/QCIs/helper_shared.qci"
+
+$definevariable _CHARACTER_NAME "smoker"
