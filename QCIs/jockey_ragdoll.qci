@@ -1,0 +1,106 @@
+$surfaceprop "flesh"
+$forcecapsules
+
+$collisionjoints "jockey_ragdoll.dmx" {
+
+	$mass 100.0
+	$inertia 2.00
+	$damping 0.05
+	$rotdamping 0.4
+	$animatedfriction 100 500 0.1 0.2 1.0
+	
+	$rootbone "bip_pelvis"
+
+	$jointmassbias "bip_collar_L" 4.00
+	$jointconstrain "bip_collar_l" z limit -10.00 10.00 0.00
+	$jointconstrain "bip_collar_l" x limit -15.00 15.00 0.00
+	$jointconstrain "bip_collar_l" y limit -0.00 45.00 0.00
+
+	$jointmassbias "bip_collar_R" 4.00
+	$jointconstrain "bip_collar_r" z limit -10.00 10.00 0.00
+	$jointconstrain "bip_collar_r" x limit -15.00 15.00 0.00
+	$jointconstrain "bip_collar_r" y limit 0.00 45.00 0.00
+
+	$jointmassbias "bip_neck" 4.00
+	$jointconstrain "bip_neck" z limit -55.00 86.00 0.00
+	$jointconstrain "bip_neck" x limit -70.00 70.00 0.00
+	$jointconstrain "bip_neck" y limit -30.00 30.00 0.00
+
+	$jointmassbias "bip_head" 4.00
+	$jointconstrain "bip_head" z limit -51.00 30.00 0.00
+	$jointconstrain "bip_head" x limit -20.00 20.00 0.00
+	$jointconstrain "bip_head" y limit -20.00 20.00 0.00
+
+	$jointmassbias "bip_spine_2" 9.00
+	$jointconstrain "bip_spine_2" z limit -41.00 23.00 0.00
+	$jointconstrain "bip_spine_2" x limit -20.00 20.00 0.00
+	$jointconstrain "bip_spine_2" y limit -32.00 30.00 0.00
+
+	$jointmassbias "bip_spine_0" 8.0
+	$jointconstrain "bip_spine_0" z limit -80.00 45.00 0.00
+	$jointconstrain "bip_spine_0" x limit -30.00 30.00 0.00
+	$jointconstrain "bip_spine_0" y limit -14.00 14.00 0.00
+
+	$jointmassbias "bip_upperArm_R" 5.00
+	$jointconstrain "bip_upperarm_r" z limit -60.00 60.00 0.00
+	$jointconstrain "bip_upperarm_r" x limit -55.00 65.00 0.00
+	$jointconstrain "bip_upperarm_r" y limit -30.00 30.00 0.00
+
+	$jointmassbias "bip_upperArm_L" 5.00
+	$jointconstrain "bip_upperarm_l" z limit -60.00 60.00 0.00
+	$jointconstrain "bip_upperarm_l" x limit -55.00 65.00 0.00
+	$jointconstrain "bip_upperarm_l" y limit -15.00 20.00 0.00
+
+	$jointmassbias "bip_lowerArm_R" 4.00
+	$jointconstrain "bip_lowerarm_r" z limit -100.00 6.00 0.00
+	$jointconstrain "bip_lowerarm_r" x limit -20.00 75.00 0.00
+	$jointconstrain "bip_lowerarm_r" y limit -3.00 3.00 0.00
+
+	$jointmassbias "bip_lowerArm_L" 4.00
+	$jointconstrain "bip_lowerarm_l" z limit -100.00 6.00 0.00
+	$jointconstrain "bip_lowerarm_l" x limit -20.00 75.00 0.00
+	$jointconstrain "bip_lowerarm_l" y limit -3.00 3.00 0.00
+
+	$jointmassbias "bip_hand_R" 1.00
+	$jointconstrain "bip_hand_r" z limit -5.00 35.00 0.00
+	$jointconstrain "bip_hand_r" x limit -6.00 6.00 0.00
+	$jointconstrain "bip_hand_r" y limit -50.00 120.00 0.00
+
+	$jointmassbias "bip_hand_L" 1.00
+	$jointconstrain "bip_hand_l" z limit -5.00 35.00 0.00
+	$jointconstrain "bip_hand_l" x limit -6.00 6.00 0.00
+	$jointconstrain "bip_hand_l" y limit -50.00 100.00 0.00
+
+	$jointmassbias "bip_hip_R" 7.00
+	$jointconstrain "bip_hip_r" z limit -10.00 15.00 0.00
+	$jointconstrain "bip_hip_r" x limit -55.00 25.00 0.00
+	$jointconstrain "bip_hip_r" y limit -25.00 25.00 0.00
+
+	$jointmassbias "bip_hip_L" 7.00
+	$jointconstrain "bip_hip_l" z limit -10.00 15.00 0.00
+	$jointconstrain "bip_hip_l" x limit -55.00 25.00 0.00
+	$jointconstrain "bip_hip_l" y limit -25.00 25.00 0.00
+
+	$jointmassbias "bip_knee_R" 4.00
+	$jointconstrain "bip_knee_r" z limit -5.00 5.00 0.00
+	$jointconstrain "bip_knee_r" x limit -10.00 115.00 0.00
+	$jointconstrain "bip_knee_r" y limit -10.00 25.00 0.00
+
+	$jointmassbias "bip_knee_L" 4.00
+	$jointconstrain "bip_knee_l" z limit -5.00 5.00 0.00
+	$jointconstrain "bip_knee_l" x limit -10.00 115.00 0.00
+	$jointconstrain "bip_knee_l" y limit -10.00 25.00 0.00
+
+	$jointmassbias "bip_foot_R" 1.00
+	$jointconstrain "bip_foot_r" z limit -30.00 20.00 0.00
+	$jointconstrain "bip_foot_r" x limit -30.00 50.00 0.00
+	$jointconstrain "bip_foot_r" y limit -20.00 30.00 0.00
+
+	$jointmassbias "bip_foot_L" 1.00
+	$jointconstrain "bip_foot_l" z limit -30.00 20.00 0.00
+	$jointconstrain "bip_foot_l" x limit -30.00 50.00 0.00
+	$jointconstrain "bip_foot_l" y limit -20.00 30.00 0.00
+
+}
+$sequence ragdoll 		"jockey_ref.dmx" 		FPS 30 		activity ACT_DIERAGDOLL 1
+
