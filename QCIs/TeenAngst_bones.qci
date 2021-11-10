@@ -75,6 +75,7 @@ $definebone "ValveBiped.weapon_bone_Clip" "ValveBiped.weapon_bone" 0.000000 -0.0
 //$definebone "ValveBiped.weapon_bone_LHand" "ValveBiped.weapon_bone_RHand" -3.606653 -3.344002 -2.883345 4.975436 -84.868301 -172.789719 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
 //$definebone "ValveBiped.weapon_bone_Clip" "ValveBiped.weapon_bone_LHand" -0.000000 0.000001 0.000000 -0.000001 -0.000038 -0.000005 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
 $definebone "ValveBiped.forward" "ValveBiped.Bip01_Head1" 2 -3 0 0 -76 -90
+$definebone "ValveBiped.L_weapon_bone" "ValveBiped.Bip01_L_Hand" 3.349001 -1.370995 0.724999 -5.043001 89.255 113.321998 0 0 0 0 0 0
 
 
 $BoneSaveFrame "ValveBiped.Bip01_Pelvis" position rotation
