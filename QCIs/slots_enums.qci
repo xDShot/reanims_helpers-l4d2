@@ -25,7 +25,7 @@ $definevariable SLOT_walk 021
 $definevariable SLOT_CrouchWalk 022
 $definevariable SLOT_Run 023
 $definevariable SLOT_CalmWalk 024
-$definevariable SLOT_Run 025
+$definevariable SLOT_CalmRun 025
 $definevariable SLOT_LimpWalk 026
 $definevariable SLOT_LimpRun 027
 $definevariable SLOT_Shoot_GrenThrow 028
