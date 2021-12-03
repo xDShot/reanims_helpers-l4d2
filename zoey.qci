@@ -3,8 +3,8 @@ $include "../reanims_helpers/QCIs/TeenAngst_bones.qci"
 $include "../reanims_helpers/QCIs/Last_Stand_extra_weapon_bones.qci"
 $include "../reanims_helpers/QCIs/TeenAngst_hitbox.qci"
 $include "../reanims_helpers/QCIs/survivor_male_ruleshierarchy.qci"
-$definevariable _CHARACTER_SCALE "1"
-$scale 1
+$definevariable _CHARACTER_SCALE "0.926520072"
+$scale 0.926520072
 $include "../reanims_helpers/QCIs/helper_shared.qci"
 
 $definevariable _CHARACTER_NAME "zoey"
