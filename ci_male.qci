@@ -7,4 +7,4 @@ $definevariable _CHARACTER_SCALE "1"
 $scale 1
 $include "../reanims_helpers/QCIs/helper_shared.qci"
 
-$definevariable _CHARACTER_NAME "ci"
+$definevariable _CHARACTER_NAME "ci_male"

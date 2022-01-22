@@ -1,0 +1,10 @@
+//
+$include "../reanims_helpers/QCIs/common_female_bones.qci"
+$include "../reanims_helpers/QCIs/common_female_exp_bones.qci"
+$include "../reanims_helpers/QCIs/common_female_ruleshierarchy.qci"
+$include "../reanims_helpers/QCIs/common_female_hitbox.qci"
+$definevariable _CHARACTER_SCALE "1"
+$scale 1
+$include "../reanims_helpers/QCIs/helper_shared.qci"
+
+$definevariable _CHARACTER_NAME "ci_female"
