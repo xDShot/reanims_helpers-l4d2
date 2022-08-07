@@ -8,3 +8,7 @@ $scale 0.926520072
 $include "../reanims_helpers/QCIs/helper_shared.qci"
 
 $definevariable _CHARACTER_NAME "zoey"
+
+$definemacro _reference \\
+$animation Idle_Standing_Align "../reanims_helpers/TeenAngst_reference" frame 0 0 \\
+

@@ -8,3 +8,7 @@ $scale 1.05
 $include "../reanims_helpers/QCIs/helper_shared.qci"
 
 $definevariable _CHARACTER_NAME "francis"
+
+$definemacro _reference \\
+$animation Idle_Standing_Align "../reanims_helpers/NamVet_Reload_Rifle_Standing" frame 0 0 \\
+
