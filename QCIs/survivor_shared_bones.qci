@@ -63,7 +63,7 @@ $definebone "ValveBiped.attachment_armR_T" "ValveBiped.Bip01_R_Forearm" 0.0 -0.0
 
 
 $definebone "ValveBiped.weapon_bone" "ValveBiped.Bip01_R_Hand" 2.856898 -1.536200 -0.973800 -15.616423 -90.427696 -86.009390 -0.000000 -0.000000 -0.000000 0.000003 -0.000001 -0.000002
-$definebone "ValveBiped.weapon_bone_Clip" "ValveBiped.weapon_bone" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "ValveBiped.weapon_bone_Clip" "ValveBiped.weapon_bone" 0.000000 0.000000 10.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
 $definebone "ValveBiped.weapon_bone_extra" "ValveBiped.weapon_bone" 0.018897 0.665159 9.395883 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
 
 $definebone "ValveBiped.forward" "ValveBiped.Bip01_Head1" 2 -3 0 0 -76 -90
