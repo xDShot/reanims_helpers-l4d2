@@ -6,3 +6,5 @@ $scale 1.175
 $include "../reanims_helpers/QCIs/helper_shared.qci"
 
 $definevariable _CHARACTER_NAME "spitter"
+$definevariable _INTERNAL_SUBFOLDER "infected"
+$definevariable _INTERNAL_NAME "spitter"

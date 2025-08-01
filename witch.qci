@@ -7,3 +7,5 @@ $scale 1
 $include "../reanims_helpers/QCIs/helper_shared.qci"
 
 $definevariable _CHARACTER_NAME "witch"
+$definevariable _INTERNAL_SUBFOLDER "infected"
+$definevariable _INTERNAL_NAME "witch"

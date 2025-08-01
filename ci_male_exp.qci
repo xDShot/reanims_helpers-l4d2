@@ -8,3 +8,8 @@ $scale 1
 $include "../reanims_helpers/QCIs/helper_shared.qci"
 
 $definevariable _CHARACTER_NAME "ci_male_exp"
+$definevariable _INTERNAL_SUBFOLDER "infected"
+$definevariable _INTERNAL_NAME "common_male_exp"
+
+$definemacro _reference \\
+$animation Idle "../reanims_helpers/Idle_ci_male" frame 0 0 \\

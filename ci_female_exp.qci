@@ -3,8 +3,10 @@ $include "../reanims_helpers/QCIs/common_female_bones.qci"
 $include "../reanims_helpers/QCIs/common_female_exp_bones.qci"
 $include "../reanims_helpers/QCIs/common_male_ruleshierarchy.qci"
 $include "../reanims_helpers/QCIs/common_female_hitbox.qci"
-$definevariable _CHARACTER_SCALE "1"
-$scale 1
+$definevariable _CHARACTER_SCALE "0.926520072"
+$scale 0.926520072
 $include "../reanims_helpers/QCIs/helper_shared.qci"
 
 $definevariable _CHARACTER_NAME "ci_female_exp"
+$definevariable _INTERNAL_SUBFOLDER "infected"
+$definevariable _INTERNAL_NAME "common_female_exp"

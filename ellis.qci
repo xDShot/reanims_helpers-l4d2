@@ -8,6 +8,8 @@ $scale .955
 $include "../reanims_helpers/QCIs/helper_shared.qci"
 
 $definevariable _CHARACTER_NAME "ellis"
+$definevariable _INTERNAL_SUBFOLDER "survivors"
+$definevariable _INTERNAL_NAME "mechanic"
 
 $definemacro _reference \\
 $animation Idle_Standing_Align "../reanims_helpers/NamVet_Reload_Rifle_Standing" frame 0 0 \\

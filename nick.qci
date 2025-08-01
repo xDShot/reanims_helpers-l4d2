@@ -8,6 +8,8 @@ $scale 1
 $include "../reanims_helpers/QCIs/helper_shared.qci"
 
 $definevariable _CHARACTER_NAME "nick"
+$definevariable _INTERNAL_SUBFOLDER "survivors"
+$definevariable _INTERNAL_NAME "gambler"
 
 $definemacro _reference \\
 $animation Idle_Standing_Align "../reanims_helpers/NamVet_Reload_Rifle_Standing" frame 0 0 \\
