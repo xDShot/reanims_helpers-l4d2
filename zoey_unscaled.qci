@@ -5,6 +5,34 @@ $include "../reanims_helpers/QCIs/TeenAngst_hitbox.qci"
 $include "../reanims_helpers/QCIs/survivor_male_ruleshierarchy.qci"
 $definevariable _CHARACTER_SCALE "1"
 $scale 1
+
+// Zoey has these sequences named differently
+$definevariable CWalk_Frying_Pan "CrouchWalk_Fry_Pan"
+$definevariable Walk_Frying_Pan "Walk_Fry_Pan"
+$definevariable Run_Frying_Pan "Run_Fry_Pan"
+$definevariable LimpWalk_Frying_Pan "LimpWalk_Fry_Pan"
+$definevariable LimpRun_Frying_Pan "LimpRun_Fry_Pan"
+$definevariable Frying_Pan "Fry_Pan"
+$definevariable adrenaline_use "adrenaline_use"
+$definevariable Heal_Self_Standing "Heal_Self_Standing"
+$definevariable Heal_Self_Crouching "Heal_Self_Crouching_01"
+$definevariable Idle_Incap_Hanging_SmokerChoke "Idle_Incap_Hanging_SmokerChoke"
+$definevariable Death_10ab "Death_m10ab"
+
+// Coach has these sequences named differently
+$definevariable Run_Pistol "Run_Pistol"
+$definevariable Run_Shotgun "Run_Shotgun"
+$definevariable LimpWalk_PumpShotgun "LimpWalk_PumpShotgun"
+$definevariable LimpRun_PumpShotgun "LimpRun_PumpShotgun"
+
+// Ellis and Nick have these sequences named differently
+$definevariable Idle_militaryZoomed "Idle_Standing_Sniper_militaryZoomed"
+$definevariable Crouching_MilitaryZoomed "Idle_Crouching_Sniper_MilitaryZoomed"
+$definevariable Injured_MilitaryZoomed "Idle_Injured_Sniper_MilitaryZoomed"
+
+$definevariable calmpistol "NamVet_AimMatrix_Pistol_Standing_Calm_Checkpoint"
+$definevariable calmrifle "NamVet_AimMatrix_Rifle_Standing_Calm"
+
 $include "../reanims_helpers/QCIs/helper_shared.qci"
 
 $definevariable _CHARACTER_NAME "zoey"
