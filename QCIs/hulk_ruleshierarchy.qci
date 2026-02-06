@@ -20,6 +20,7 @@ $poseparameter "body_pitch" -90 90 loop 360
 $poseparameter "body_yaw" -90 90 loop 360
 
 $weightlist UPPERBODY "Valvebiped.bip01_Pelvis" 0.0 "ValveBiped.Bip01_Spine0" 1.0 
+$weightlist ALLUPPERBODY "Valvebiped.bip01_Pelvis" 1.0 "Valvebiped.Bip01_L_Thigh" 0.0 "Valvebiped.Bip01_R_Thigh" 0.0 
 $weightlist NOLOWERBODY "Valvebiped.bip01_Pelvis" 1.0 "Valvebiped.Bip01_L_Thigh" 0.0 "Valvebiped.Bip01_R_Thigh" 0.0 "ValveBiped.Bip01_L_Hand" 0.0 "ValveBiped.Bip01_R_Hand" 0.0 
 
 $weightlist MELEE_DELTA "Valvebiped.bip01_Pelvis" 1 "ValveBiped.Bip01_Spine0" 0.9 "ValveBiped.Bip01_Spine1" 0.75 "ValveBiped.Bip01_Spine2" 0.6 "ValveBiped.Bip01_Spine3" 0.5 "ValveBiped.Bip01_L_Clavicle"  0  "ValveBiped.Bip01_R_Clavicle" 0 "ValveBiped.Bip01_Neck0" 0.0 "Valvebiped.Bip01_L_Thigh" 0.0 "Valvebiped.Bip01_R_Thigh" 0.0 
