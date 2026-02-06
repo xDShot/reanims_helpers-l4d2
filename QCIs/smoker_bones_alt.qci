@@ -1,0 +1,167 @@
+$definebone "ValveBiped.Bip01_Pelvis" "" 0.360021 0.139344 57.085552 -0.000000 -0.000000 89.999983 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "ValveBiped.Bip01_L_Thigh" "ValveBiped.Bip01_Pelvis" 5.370114 0.000000 -0.000012 -4.648750 -87.360197 -89.999983 0.000000 0.000000 0.000000 0.000000 -0.000001 0.000000
+$definebone "ValveBiped.Bip01_L_Calf" "ValveBiped.Bip01_L_Thigh" 28.163282 -0.000107 0.000102 0.000000 9.119998 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000
+$definebone "ValveBiped.Bip01_L_Foot" "ValveBiped.Bip01_L_Calf" 24.509750 -0.000264 -0.000031 -12.702129 -70.961104 -7.908595 -0.000000 0.000000 0.000000 0.000002 0.000002 0.000000
+$definebone "ValveBiped.Bip01_L_Toe0" "ValveBiped.Bip01_L_Foot" 7.912904 0.000028 -0.000004 -1.093604 -21.218121 0.554221 0.000000 0.000000 0.000000 -0.000000 0.000001 -0.000001
+$definebone "ValveBiped.Bip01_R_Thigh" "ValveBiped.Bip01_Pelvis" -5.370118 -0.000004 0.000000 -4.648750 -92.639831 -90.000038 -0.000004 0.000000 0.000000 -0.000000 -0.000000 0.000000
+$definebone "ValveBiped.Bip01_R_Calf" "ValveBiped.Bip01_R_Thigh" 28.163284 0.000042 0.000164 -0.000000 9.119541 0.000115 0.000000 -0.000000 0.000000 -0.000000 -0.000001 -0.000000
+$definebone "ValveBiped.Bip01_R_Foot" "ValveBiped.Bip01_R_Calf" 24.509769 0.000104 0.000037 12.702015 -70.960708 8.558957 -0.000000 0.000000 -0.000000 -0.000002 0.000001 -0.000002
+$definebone "ValveBiped.Bip01_R_Toe0" "ValveBiped.Bip01_R_Foot" 7.912888 -0.000017 -0.000004 0.858172 -21.228600 -5.620372 0.000000 0.000000 0.000000 -0.000003 0.000000 -0.000001
+$definebone "ValveBiped.Bip01_Spine" "ValveBiped.Bip01_Pelvis" 0.000000 4.617378 -1.456132 4.771822 89.999983 89.999983 0.000000 0.000000 0.000000 -0.000000 -0.000000 -0.000000
+$definebone "ValveBiped.Bip01_Spine1" "ValveBiped.Bip01_Spine" 5.842876 -0.000088 -0.000034 -0.000000 3.434194 -0.000000 0.000000 -0.000000 0.000000 -0.000000 -0.000000 -0.000000
+$definebone "ValveBiped.Bip01_Spine2" "ValveBiped.Bip01_Spine1" 5.971390 -0.000042 -0.000038 -0.000000 5.778452 -0.000000 0.000000 0.000000 0.000000 -0.000000 -0.000000 -0.000000
+$definebone "ValveBiped.Bip01_Spine4" "ValveBiped.Bip01_Spine2" 8.876755 -0.000001 0.000012 -0.000000 28.396363 -0.000000 0.000000 0.000000 0.000000 -0.000000 -0.000000 -0.000000
+$definebone "ValveBiped.Bip01_Neck1" "ValveBiped.Bip01_Spine4" 7.940414 -0.000084 -0.000034 0.000000 41.748050 179.999911 0.000000 0.000000 -0.000000 -0.000000 -0.000000 -0.000000
+$definebone "ValveBiped.Bip01_Head1" "ValveBiped.Bip01_Neck1" 5.810747 -0.000008 -0.000039 -0.000115 74.100464 0.000057 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "ValveBiped.Bip01_L_Clavicle" "ValveBiped.Bip01_Spine4" 5.801590 2.048149 2.192785 -66.471484 -148.630587 51.250957 0.000000 0.000000 0.000000 -0.000001 0.000000 0.000006
+$definebone "ValveBiped.Bip01_L_UpperArm" "ValveBiped.Bip01_L_Clavicle" 7.072942 -0.000015 -0.000080 -25.853632 -49.959453 -87.916475 0.000000 0.000000 -0.000004 -0.000005 0.000004 -0.000001
+$definebone "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_L_UpperArm" 15.981834 -0.000130 -0.000034 -0.000005 -15.719037 0.000000 -0.000004 0.000000 0.000000 -0.000005 0.000001 0.000000
+$definebone "ValveBiped.Bip01_L_Hand" "ValveBiped.Bip01_L_Forearm" 15.431057 -0.000052 -0.000069 6.889527 7.860640 87.013496 0.000000 0.000000 0.000000 0.000003 0.000002 0.000000
+$definebone "ValveBiped.Bip01_R_Clavicle" "ValveBiped.Bip01_Spine4" 5.801559 2.048180 -2.192810 66.471511 -148.629371 -55.515747 -0.000001 0.000000 -0.000004 0.000008 0.000005 0.000002
+$definebone "ValveBiped.Bip01_R_UpperArm" "ValveBiped.Bip01_R_Clavicle" 7.072949 -0.000015 -0.000027 29.085804 -48.511071 91.055022 0.000000 -0.000000 0.000000 0.000005 -0.000002 -0.000000
+$definebone "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_R_UpperArm" 15.981834 -0.000068 0.000019 0.000060 -15.719039 0.000113 0.000000 0.000000 0.000000 0.000003 0.000001 -0.000001
+$definebone "ValveBiped.Bip01_R_Hand" "ValveBiped.Bip01_R_Forearm" 15.431038 -0.000108 -0.000053 -6.890216 7.860295 -87.245429 0.000004 0.000000 -0.000000 -0.000001 0.000003 0.000000
+// jiggle bones
+$definebone "ValveBiped.jiggle_tongue1" "ValveBiped.Bip01_Head1" -0.218853 -3.958854 0.026454 89.767968 155.869768 -46.311876 0.000000 0.000000 -0.000001 0.000000 0.000000 0.000002
+$definebone "ValveBiped.jiggle_tongue2" "ValveBiped.jiggle_tongue1" -0.006656 -0.069521 7.785016 0.000000 0.000000 19.047642 -0.000000 -0.000000 -0.000001 0.000000 0.000000 0.000002
+$definebone "ValveBiped.jiggle_tongue3" "ValveBiped.jiggle_tongue2" -0.005325 -0.415335 7.212867 0.000000 0.000000 0.000002 -0.000000 0.000000 -0.000001 0.000000 0.000000 0.000002
+$definebone "ValveBiped.jiggle_meatbeard" "ValveBiped.Bip01_Head1" -7.040092 -2.184461 0.041863 89.767968 155.870957 -46.309988 0.000000 0.000000 0.000004 0.000000 0.000000 0.000002
+$definebone "ValveBiped.jiggle_tentacle_A1" "ValveBiped.Bip01_Neck1" 0.838181 4.615875 0.964768 -50.089172 -9.426844 -15.256828 0.000000 0.000000 -0.000001 0.000003 0.000000 -0.000001
+$definebone "ValveBiped.jiggle_tentacle_A2" "ValveBiped.jiggle_tentacle_A1" 3.075022 -2.217667 12.803773 4.766970 -9.334805 11.749574 0.000001 -0.000008 0.000000 0.000002 0.000000 0.000000
+$definebone "ValveBiped.jiggle_tentacle_A3" "ValveBiped.jiggle_tentacle_A2" 0.174681 -1.169014 11.302997 13.447305 -1.717640 19.732939 0.000000 0.000008 0.000000 0.000003 0.000000 -0.000003
+$definebone "ValveBiped.jiggle_tentacle_C" "ValveBiped.Bip01_L_Clavicle" 5.818921 3.354202 -5.660637 29.444645 175.941877 -152.840306 0.000000 0.000000 0.000000 -0.000000 -0.000007 -0.000005
+$definebone "ValveBiped.jiggle_tentacle_D" "ValveBiped.Bip01_L_Clavicle" 9.644276 2.657677 -2.495693 44.751079 -131.132544 -132.822128 0.000000 0.000000 0.000000 0.000003 -0.000004 0.000000
+// tongue jiggle bones
+
+$BoneSaveFrame "ValveBiped.Bip01_Pelvis" position rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Thigh" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Calf" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Foot" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Thigh" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Calf" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Foot" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Spine" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Spine1" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Spine2" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Spine4" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Neck1" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Head1" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Clavicle" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_UpperArm" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Forearm" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Hand" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Clavicle" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_UpperArm" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Forearm" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Hand" rotation
+
+
+//  ------ Jiggle Bones ----
+$jigglebone "ValveBiped.jiggle_tongue1" {
+	is_flexible {
+		tip_mass 1000
+		length 5
+		pitch_stiffness 150
+		pitch_damping 5
+		pitch_constraint -8 45
+		yaw_stiffness 150
+		yaw_damping 5
+		yaw_constraint -55 0
+	}
+}
+$jigglebone "ValveBiped.jiggle_tongue2" {
+	is_flexible {
+		tip_mass 100
+		length 5
+		pitch_stiffness 150
+		pitch_damping 5
+		pitch_constraint -8 60
+		yaw_stiffness 150
+		yaw_damping 5
+		yaw_constraint -70 0
+	}
+}
+$jigglebone "ValveBiped.jiggle_tongue3" {
+	is_flexible {
+		tip_mass 100
+		length 5
+		pitch_stiffness 150
+		pitch_damping 5
+		pitch_constraint -60 60
+		yaw_stiffness 150
+		yaw_damping 5
+		yaw_constraint -60 60
+	}
+}
+$jigglebone "ValveBiped.jiggle_tentacle_A1" {
+	is_flexible {
+		tip_mass 100
+		length 5
+		pitch_stiffness 150
+		pitch_damping 5
+		pitch_constraint -35 35
+		yaw_stiffness 150
+		yaw_damping 5
+		yaw_constraint -35 35
+	}
+}
+$jigglebone "ValveBiped.jiggle_tentacle_A2" {
+	is_flexible {
+		tip_mass 100
+		length 5
+		pitch_stiffness 120
+		pitch_damping 5
+		pitch_constraint -60 60
+		yaw_stiffness 120
+		yaw_damping 5
+		yaw_constraint -60 60
+	}
+}
+$jigglebone "ValveBiped.jiggle_tentacle_A3" {
+	is_flexible {
+		tip_mass 100
+		length 5
+		pitch_stiffness 150
+		pitch_damping 5
+		pitch_constraint -60 60
+		yaw_stiffness 150
+		yaw_damping 5
+		yaw_constraint -60 60
+	}
+}
+$jigglebone "ValveBiped.jiggle_tentacle_C" {
+	is_flexible {
+		tip_mass 100
+		length 5
+		pitch_stiffness 150
+		pitch_damping 5
+		pitch_constraint -60 60
+		yaw_stiffness 150
+		yaw_damping 5
+		yaw_constraint -60 60
+	}
+}
+$jigglebone "ValveBiped.jiggle_tentacle_D" {
+	is_flexible {
+		tip_mass 100
+		length 5
+		pitch_stiffness 150
+		pitch_damping 5
+		pitch_constraint -60 60
+		yaw_stiffness 150
+		yaw_damping 5
+		yaw_constraint -60 60
+	}
+}
+$jigglebone "ValveBiped.jiggle_meatbeard" {
+	is_flexible {
+		tip_mass 600
+		length 5
+		pitch_stiffness 200
+		pitch_damping 5
+		pitch_constraint -40 40
+		yaw_stiffness 200
+		yaw_damping 5
+		yaw_constraint -40 40
+	}
+}

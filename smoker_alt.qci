@@ -1,0 +1,13 @@
+//
+$include "../reanims_helpers/QCIs/smoker_bones.qci"
+$include "../reanims_helpers/QCIs/smoker_ruleshierarchy.qci"
+$definevariable _CHARACTER_SCALE "1.175"
+$scale 1.175
+$include "../reanims_helpers/QCIs/helper_shared.qci"
+
+$definevariable _CHARACTER_NAME "smoker"
+$definevariable _INTERNAL_SUBFOLDER "infected"
+$definevariable _INTERNAL_NAME "smoker"
+
+$definemacro _reference \\
+$animation a_reference "../reanims_helpers/Smoker_Idle_Standing" frame 0 0 \\
