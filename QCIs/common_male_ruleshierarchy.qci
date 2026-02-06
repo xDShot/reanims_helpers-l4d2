@@ -12,6 +12,12 @@ $heirarchy "valvebiped.Bip01_R_Clavicle" "valvebiped.Bip01_Spine4"
 $heirarchy "valvebiped.Bip01_L_Thigh" "valvebiped.Bip01_Pelvis" 
 $heirarchy "valvebiped.Bip01_R_Thigh" "valvebiped.Bip01_Pelvis" 
 
+$poseparameter "body_yaw" -180 180 loop 0
+$poseparameter "body_pitch" -90 45 loop 0
+$poseparameter "move_y" -1 1 loop 0
+$poseparameter "move_x" -1 1 loop 0
+$poseparameter "lean_yaw" -30 30 loop 0
+
 
 $weightlist NOLOWERBODY "Valvebiped.bip01_Pelvis" 1.0 "Valvebiped.Bip01_L_Thigh" 0.0 "Valvebiped.Bip01_R_Thigh" 0.0 "ValveBiped.Bip01_L_Hand" 0.0 "ValveBiped.Bip01_R_Hand" 0.0 
 $weightlist ALLUPPERBODY "Valvebiped.bip01_Pelvis" 1.0 "Valvebiped.Bip01_L_Thigh" 0.0 "Valvebiped.Bip01_R_Thigh" 0.0 
