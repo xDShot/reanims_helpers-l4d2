@@ -8,3 +8,7 @@ $include "../reanims_helpers/QCIs/helper_shared.qci"
 $definevariable _CHARACTER_NAME "hunter"
 $definevariable _INTERNAL_SUBFOLDER "infected"
 $definevariable _INTERNAL_NAME "hunter"
+
+$definemacro _reference \\
+$animation a_reference "../reanims_helpers/Hunter_Idle_Standing_01" frame 0 0 origin 0 -5 -1 \\
+

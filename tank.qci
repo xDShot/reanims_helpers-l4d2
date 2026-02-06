@@ -8,3 +8,15 @@ $include "../reanims_helpers/QCIs/helper_shared.qci"
 $definevariable _CHARACTER_NAME "tank"
 $definevariable _INTERNAL_SUBFOLDER "infected"
 $definevariable _INTERNAL_NAME "hulk"
+
+$renamebone "ValveBiped.Bip01_Spine" "ValveBiped.Bip01_Spine0"
+$renamebone "ValveBiped.Bip01_Spine1" "ValveBiped.Bip01_Spine1"
+$renamebone "ValveBiped.Bip01_Spine2" "ValveBiped.Bip01_Spine2"
+$renamebone "ValveBiped.Bip01_Spine4" "ValveBiped.Bip01_Spine3"
+$renamebone "ValveBiped.Bip01_L_Toe0" "ValveBiped.Bip01_L_Toe"
+$renamebone "ValveBiped.Bip01_R_Toe0" "ValveBiped.Bip01_R_Toe"
+$renamebone "ValveBiped.Bip01_Neck1""ValveBiped.Bip01_Neck0"
+$renamebone "ValveBiped.Bip01_Head1" "ValveBiped.Bip01_Head"
+
+$definemacro _reference \\
+$animation a_reference "../reanims_helpers/hulk_Idle" frame 0 0 origin 0 -10 0 \\

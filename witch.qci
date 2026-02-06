@@ -9,3 +9,6 @@ $include "../reanims_helpers/QCIs/helper_shared.qci"
 $definevariable _CHARACTER_NAME "witch"
 $definevariable _INTERNAL_SUBFOLDER "infected"
 $definevariable _INTERNAL_NAME "witch"
+
+$definemacro _reference \\
+$animation a_reference "../reanims_helpers/Witch_Idle_Standing" frame 0 0 \\
